@@ -1,0 +1,74 @@
+{
+  "PageTitle": "Maze Generator",
+  "Updated": "11/18/2015",
+  "Menu": [
+    {
+      "Name": "Features",
+      "Items": [
+        {
+          "Name": "About",
+          "Link": "about"
+        },
+		{
+          "Name": "Generating Mazes",
+          "Link": "generation"
+        },
+		{
+          "Name": "Editing Mazes",
+          "Link": "editing"
+        },
+		{
+          "Name": "Settings",
+          "Link": "settings"
+        },
+		{
+          "Name": "Save/Open",
+          "Link": "saveopen"
+        }
+      ]
+    },
+    {
+      "Name": "Download",
+      "Link": "download"
+    },
+	{
+      "Name": "API",
+      "Link": "api"
+    }
+  ],
+  "Content": [
+    {
+      "Title": "Quick Description",
+      "Id": "quick-description",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/93f60cc74d13175ce5aee548cc020b10.png",
+          "Alt": "Picture of the maze creator program."
+        }
+      ],
+      "Text": [
+        "The maze creator program is a program that allows you to create mazes of any size with ease. You can create mazes either by using an algorithm to generate them or building them yourself in the creator (You can even combine the two by generating a maze and then editing it!). You then can save these files as .maz files to be loaded into games or to be edited later in the maze creator!"
+      ]
+    },
+	{
+      "Title": "Help Menu",
+      "Id": "help-menu",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/55ec91a6523562ca82341510c7bdde43.png",
+          "Alt": "Picture of the top of the help menu."
+        },
+		{
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/d121313f333eba42faa37220aa599bb7.png",
+          "Alt": "Picture of the bottom of the help menu."
+        }
+      ],
+      "Text": [
+        "This menu in the maze creator shows the basic controls of the creator. Open it by clicking Help or pressing Ctrl+H"
+      ]
+    }
+  ]
+}

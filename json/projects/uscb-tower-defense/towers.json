@@ -1,0 +1,67 @@
+{
+	"PageTitle": "Towers",
+	"Updated": "11/18/2015",
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Towers",
+		"Link": "towers"
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Nursing",
+		"Id":"nursing",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/5815fde79da01e0d7121ec34fbde2771.png",
+			"Alt":"Image of the towers in the help menu."
+		}
+		],
+		"Text":[
+		"The Nursing tower shots projectiles (i.e. syringes) at the bees to hurt them. Upgradeing this tower upgrades the projectiles or the tower itself."
+		]
+	},
+	{
+		"Title":"Computational Science",
+		"Id":"comp-sci",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/5815fde79da01e0d7121ec34fbde2771.png",
+			"Alt":"Image of the towers in the help menu."
+		}
+		],
+		"Text":[
+		"The Computational Science tower produces \"robots\" that will fight bees until they die. The tower will only summon a robot if the robot it \"owns\" dies. Therefore, each tower can only have one robot at a time. When you upgrade this tower it upgrades the robots."
+		]
+	},
+	{
+		"Title":"Upgrades",
+		"Id":"upgrades",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/61e8df2d79c4a84aeca5defac06a252c.png",
+			"Alt":"Image of the upgrade in the help menu."
+		}
+		],
+		"Text":[
+		"There are up to 5 different upgrades you can apply to each tower. They are as follows",
+		"Attack - Increase damage of projectiles or robots.",
+		"Defense - (Can only be applied to Comp. Sci.) Increase health of robots.",
+		"Time - Decrease time between attacks of tower or robots.",
+		"Radius - Increase range of towers or robots.",
+		"Sell - Sells the tower for part of the total gold spent on it."
+		]
+	}
+	]
+}

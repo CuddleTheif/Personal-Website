@@ -1,0 +1,20 @@
+{
+	"PageTitle": "Something went wrong!",
+	"Updated": "11/18/2015",
+	"Content": [
+	{
+		"Title":"Error!",
+		"Id":"error",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"",
+			"Alt":"Put an error image here"
+		}
+		],
+		"Text":[
+		"Something bad happened! Try and refresh the page and if that doesn't fix it please contact the website's host."
+		]
+	}
+	]
+}

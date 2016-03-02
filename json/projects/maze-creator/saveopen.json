@@ -1,0 +1,69 @@
+{
+  "PageTitle": "Maze Generator",
+  "Updated": "11/18/2015",
+  "Menu": [
+    {
+      "Name": "Features",
+      "Items": [
+        {
+          "Name": "About",
+          "Link": "about"
+        },
+		{
+          "Name": "Generating Mazes",
+          "Link": "generation"
+        },
+		{
+          "Name": "Editing Mazes",
+          "Link": "editing"
+        },
+		{
+          "Name": "Settings",
+          "Link": "settings"
+        },
+		{
+          "Name": "Save/Open",
+          "Link": "saveopen"
+        }
+      ]
+    },
+    {
+      "Name": "Download",
+      "Link": "download"
+    },
+	{
+      "Name": "API",
+      "Link": "api"
+    }
+  ],
+  "Content": [
+    {
+      "Title": "Save",
+      "Id": "save",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/0b22a13b4b651ea6a26b3d18d6fa55a8.gif",
+          "Alt": "Gif of saving a maze."
+        }
+      ],
+      "Text": [
+        "You can save at any time using Ctrl+S or Save As... (Which forces a file choice to save) using Ctrl+Shift+S or you can click File->Save and File->Save As... respectively. It saves the maze as a .maz file which can be read by some games (See <a href=\"api\">API</a> for more info) and can be opened in the maze creator to continue editing."
+      ]
+    },
+	{
+      "Title": "Open",
+      "Id": "open",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/0b22a13b4b651ea6a26b3d18d6fa55a8.gif",
+          "Alt": "Gif of opening a maze."
+        }
+      ],
+      "Text": [
+        "You can open or load an already created maze by clicking File->Open or Ctrl+O and then choosing the maze to open."
+      ]
+    }
+  ]
+}

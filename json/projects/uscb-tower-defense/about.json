@@ -1,0 +1,79 @@
+{
+	"PageTitle": "USCB Tower Defense",
+	"Updated": "11/18/2015",
+	"Message": "This project is no longer being developed nor are there any plans to continue development.",
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Towers",
+		"Link": "towers"
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Summary",
+		"Id":"summary",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/f7b7f2669dbcfb44982c88feae60e0ed.png",
+			"Alt":"Image of the main menu."
+		}
+		],
+		"Text":[
+		"USCB Tower Defense is a basic tower defense game where you defend USCB from their rivals SCAD Bees. The towers in the game represent the different majors in USCB and there was plans to add students coming through that the player had to mark to stop his towers from attacking them."
+		]
+	},
+	{
+		"Title":"Controls",
+		"Id":"controls",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/7124e48b9b855fcce72c64055256f7cc.png",
+			"Alt":"Image of the goal in the ingame help menu."
+		}
+		],
+		"Text":[
+		"It is made for android so the controls are very simple. The player taps a spot to open the menu to buy a tower and then taps a tower to buy it. The same type of menu appears when the player taps on a tower to upgrade it."
+		]
+	},
+	{
+		"Title":"Tools",
+		"Id":"tools",
+		"Images":[
+		{
+			"Size":"tiny",
+			"Src":"http://upload.wikimedia.org/wikipedia/commons/4/43/Greenfoot_Logo.jpg",
+			"Alt":"Image of greenfoot logo"
+		}
+		],
+		"Text":[
+		"This game was using the greenfoot libraries in Java and uses the droidfoot libraries to port it to android"
+		]
+	},
+	{
+		"Title":"Screenshots",
+		"Id":"screenshots",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/75a9e21b4e57240dc6a05a174a7bf2bc.png",
+			"Alt":"Screenshot of the game"
+		},
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/92fa544d8e933cfba82386320184995f.png",
+			"Alt":"Screenshot of the game"
+		}
+		]
+	}
+	]
+}

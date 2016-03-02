@@ -1,0 +1,35 @@
+{
+	"PageTitle": "Ancient Lives",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Jacob Delello", "Alek Wagner", "Nicole Moore"],
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Showcase",
+		"Link": "showcase"
+	},
+	{
+		"Name": "Demo",
+		"Link": "https://youtu.be/UiNnS-dqd2I"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Synopsis",
+		"Id":"synopsis",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"",
+			"Alt":"Image..."
+		}
+		],
+		"Text":[
+		"Text..."
+		]
+	}
+	]
+}

@@ -1,0 +1,53 @@
+{
+	"PageTitle": "Unreal GameJam Sept 2015",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Alek Wagner", "Peter Mize", "Demetrius Rhodes", "Rebecca Glen"],
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Game",
+		"Link": "game"
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Theme",
+		"Id":"theme",
+		"Text":[
+		"The theme in this game jam was \"Live Deathless\""
+		]
+	},
+	{
+		"Title":"In Extremis",
+		"Id":"in-extremis",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/7ff341ff43b8de4075c657e257cb169b.png",
+			"Alt":"Image of the main menu"
+		}
+		],
+		"Text":[
+		"We used the theme to come up with our game in extermis. It's a game were you play as an adventure who is going to die of an unknown diease and therefore is exploring acient ruins looking for immortality. This was our first game jam and our first time using Unreal Engine."
+		]
+	},
+	{
+		"Title":"Highlight",
+		"Id":"highlight",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/0d1f9973f6ffa801b3e5a74ecc81d0bf.gif",
+			"Alt":"Gif of highlight of our game."
+		}
+		]
+	}
+	]
+}

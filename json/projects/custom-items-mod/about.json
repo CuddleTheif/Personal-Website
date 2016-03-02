@@ -1,0 +1,70 @@
+{
+	"PageTitle": "Custom Items Mod",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Wolfoxymy (Art)"],
+	"Menu": [
+	{
+		"Name": "Features",
+		"Items":[
+		{
+			"Name": "About",
+			"Link": "about"
+		},
+		{
+			"Name": "Gemstones",
+			"Link": "gemstones"
+		},
+		{
+			"Name": "Gems",
+			"Link": "gems"
+		},
+		{
+			"Name": "Affinity",
+			"Link": "affinity"
+		}
+		]
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Summary",
+		"Id":"summary",
+		"Text":[
+		"Use the new items added by this mod to enhance your items in the game. Anywhere from simply increasing your health while wearing the modified armor, to poisoning enemies with a modified sword, to even trapping you enemies in ice with a modified bow."
+		]
+	},
+	{
+		"Title":"Identification Scroll",
+		"Id":"identification-scroll",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/0zbTWuW.png",
+			"Alt":"Image of crafting an identification scroll"
+		}
+		],
+		"Text":[
+		"The above is a shapeless recipe. The identification scroll Used to identify items and make the able to modified by this mod. Identified an item using the scroll allows it to be modified but a modified/identified item can still be used in any way a non-modified/non-identified item can. It will tell you how many slots an item has (For what goes in slots see <a href=\"gems\">gems</a>). There is a %10 chance that when identifying an item it will get an <a href=\"affinity\">Affinity</a>."
+		]
+	},
+	{
+		"Title":"Modifying an Item",
+		"Id":"modifying-item",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/mZwekWf.png",
+			"Alt":"Image of crafting a sword with a gem in its slot."
+		}
+		],
+		"Text":[
+		"To modify an item just put the identified item and the item to mod it with (also identified) in a shapeless recipe.",
+		"Note: This mod should work with items not only from vanilla minecraft but also items from other mods! For example: You can slot swords, bows, armor, or tools added by other mods with the gems from this mod."
+		]
+	}
+	]
+}

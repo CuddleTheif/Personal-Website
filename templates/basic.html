@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>{{.WebTitle}}</title>
+    <style>{{.StyleSheet}}</style>
+    <meta charset="utf-8">
+    <script type="text/javascript">{{.Javascript}}</script>
+</head>
+
+<body>
+
+	<div id="body">
+		<div id="title">
+			<h1>{{.PageTitle}}</h1>
+			<ul class="menu">
+				{{range .Menu}}
+				<a href="{{.Link}}"><li>
+					{{.Name}}
+					<ul>
+						{{range .Items}}
+						<a href="{{.Link}}"><li>{{.Name}}</li></a>
+						{{end}}
+					</ul>
+				</li></a>
+				{{end}}
+			</ul>
+		</div>
+		
+		<div id="main">
+			<div class="sidebar">
+			
+			</div>
+			<div id="content">
+				<p class="page-message" class="content">{{.Message}}</p>
+				{{range .Content}}
+				<h2 id="{{.Id}}">{{.Title}}</h2>
+				{{range .Images}}
+				<img class="{{.Size}}-image" src="{{.Src}}" alt="{{.Alt}}"/>
+				{{end}}
+				{{range .Text}}
+				<p class="content">{{.}}</p>
+				{{end}}
+				{{end}}
+			</div>
+			<div class="sidebar">
+				<nav class="sticky">
+					Page Content:
+					<ul>
+						{{range .Content}}
+						{{if .Id}}
+						<li><a href="#{{.Id}}">{{.Title}}</a></li>
+						{{end}}
+						{{end}}
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="links"> 
+				<a href="#">Top</a> || 
+				<a href="/">Main Page</a> 
+			</div>
+			<p>Developed By: {{.Author}} {{range .OtherAuthors}} || {{.}} {{end}}</p>
+			<p>Page Last Updated: {{.Updated}}</p>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+goapp deploy -application necro-theif app.yaml

@@ -1,0 +1,83 @@
+{
+  "PageTitle": "Maze Generator",
+  "Updated": "11/18/2015",
+  "Menu": [
+    {
+      "Name": "Features",
+      "Items": [
+        {
+          "Name": "About",
+          "Link": "about"
+        },
+		{
+          "Name": "Generating Mazes",
+          "Link": "generation"
+        },
+		{
+          "Name": "Editing Mazes",
+          "Link": "editing"
+        },
+		{
+          "Name": "Settings",
+          "Link": "settings"
+        },
+		{
+          "Name": "Save/Open",
+          "Link": "saveopen"
+        }
+      ]
+    },
+    {
+      "Name": "Download",
+      "Link": "download"
+    },
+	{
+      "Name": "API",
+      "Link": "api"
+    }
+  ],
+  "Content": [
+    {
+      "Title": "Settings Menu",
+      "Id": "settings-menu",
+      "Images": [
+        {
+          "Size": "small",
+          "Src": "https://i.gyazo.com/c04f007865e338cb4b0210e916323f88.png",
+          "Alt": "Image of Settings menu."
+        }
+      ],
+      "Text": [
+        "You can open the settings menu by clicking Edit->Settings or pressing Ctrl+T. Here you can change the current maze's width and height. You can also change the current creator's tile size (The size of the tiles in the maze creator)."
+      ]
+    },
+	{
+      "Title": "Exit Tool",
+      "Id": "exit-tool",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/bd5130bb0f63a8b5a66115b4445ad81a.gif",
+          "Alt": "Gif of Changing the exit in a grid."
+        }
+      ],
+      "Text": [
+        "You can change the tile that is the exit of the maze by Ctrl+Clicking the new tile to be the exit (Or by entering exit mode by clicking Edit->Change Exit then clicking the tile to set as the new exit)."
+      ]
+    },
+	{
+      "Title": "Entrance Tool",
+      "Id": "entrance-tool",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/ef50f99bc16ab43398a8ca7009c6f7b8.gif",
+          "Alt": "Gif of Changing the entrance in a grid."
+        }
+      ],
+      "Text": [
+        "You can change the tile that is the entrance of the maze by Alt+Clicking the new tile to be the exit (Or by entering entrance mode by clicking Edit->Change Entrance then clicking the tile to set as the new entrance)."
+      ]
+    }
+  ]
+}

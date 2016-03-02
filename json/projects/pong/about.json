@@ -1,0 +1,72 @@
+{
+	"PageTitle": "Pong",
+	"Updated": "11/18/2015",
+	"Menu": [
+	{
+		"Name": "Features",
+		"Items":[
+		{
+			"Name": "About",
+			"Link": "about"
+		},
+		{
+			"Name": "Settings",
+			"Link": "settings"
+		},
+		{
+			"Name": "AI",
+			"Link": "ai"
+		},
+		{
+			"Name": "Moderator",
+			"Link": "moderator"
+		}
+		]
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Summary",
+		"Id":"summary",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/b4483280c2d5a58c87cf45b547933e8d.png",
+			"Alt":"Image of the main menu"
+		}
+		],
+		"Text":[
+		"The basic pong game you all know and love with many different settings and a brand new Moderator mode! (This is the first full game I made and it was made in under 2 days so be warned!)"
+		]
+	},
+	{
+		"Title":"Demo",
+		"Id":"demo",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/a640a51a1944ec4efe55c7a134357dc5.gif",
+			"Alt":"Gif of a pong game."
+		}
+		]
+	},
+	{
+		"Title":"Settings",
+		"Id":"settings",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/011a086ad9598dd82c3f506321110100.png",
+			"Alt":"Image of the settings menu"
+		}
+		],
+		"Text":[
+		"You can change many settings in this pong game, all the way from diffculty and speed of the game to controls and colors! See the <a href=\"settings\">Settings</a> section for more info."
+		]
+	}
+	]
+}

@@ -1,0 +1,85 @@
+{
+  "PageTitle": "Playthrough List",
+  "Updated": "11/18/2015",
+  "Menu": [
+    {
+      "Name": "Features",
+      "Items": [
+        {
+          "Name": "About",
+          "Link": "about"
+        },
+		{
+          "Name": "Playthrough List",
+          "Link": "playthrough"
+        },
+		{
+          "Name": "Request List",
+          "Link": "request"
+        }
+      ]
+    },
+    {
+      "Name": "Download",
+      "Link": "download"
+    }
+  ],
+  "Content": [
+    {
+      "Title": "List",
+      "Id": "list",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/5c92fd402e77c5b974dc0e12ea785565.png",
+          "Alt": "Picture of the a basic palythrough list."
+        }
+      ],
+      "Text": [
+        "The program lists all the games you have yet to play in this view. They way to add/remove/edit the games is the buttons on the left and you can save you changes by pressing save."
+      ]
+    },
+	{
+      "Title": "Add Game",
+      "Id": "add-game",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/6473d400b850307997105f4f71026906.gif",
+          "Alt": "Gif of adding a game to the list."
+        }
+      ],
+      "Text": [
+        "Press the '+' button to add a game to the list and it will prompt you for the game number. Keep in mind you can't add a number that is already on the list!"
+      ]
+    },
+	{
+      "Title": "Remove Game",
+      "Id": "remove-game",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/d1a9cfbeb1ad6c70e1b378a19321ffc9.gif",
+          "Alt": "Gif of removing a game from the list."
+        }
+      ],
+      "Text": [
+        "Select the game you want to remove and click the '-' button to remove it. Warning! This can't be undone and although you can just re-add it will remove it from any request list that has that number!"
+      ]
+    },
+	{
+      "Title": "+/- 1",
+      "Id": "plus-minus-one",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/ed695d2c0283072c26ffcc439e267242.gif",
+          "Alt": "Gif of adding one to every element and subtracting one."
+        }
+      ],
+      "Text": [
+        "If a number gets insterted in your list and every number after gets added to or if a game gets deleted so even game after gets -1 you can use the \"+1\" and \"-1\" buttons to either add or subtract one from ever game from selection onwards!"
+      ]
+    }
+  ]
+}

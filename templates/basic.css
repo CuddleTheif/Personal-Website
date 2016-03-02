@@ -1,0 +1,126 @@
+/* imports a Google font */
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+
+/* creates an 800px-wide space centered on the page, to constrain line width. it also  specifies a default typeface and line height for the entire body of the document */
+body{
+	background: #{{.BackgroundColor}};
+	margin:0;
+	color: #{{.ForegroundColor}};
+}
+
+#body {
+	text-align: center;
+	display: table;
+    position: absolute;
+    font-size: 150%;
+    width:100%;
+    height:100%;
+    }
+
+#main {
+	display: table;
+	width:100%;
+	height:100%;
+}
+
+#content {
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 150%;
+	font-family: Lora;
+	padding: 25px 100px;
+	min-width:500px;
+	margin: 0px;
+	box-shadow: 0px 0px 10px black inset;
+	-moz-box-shadow: 0px 0px 10px black inset;
+	-webkit-box-shadow: 0px 0px 10px black inset;
+}
+
+.page-message{
+	background-color:#{{.MessageBackgroundColor}};
+	color:#{{.MessageColor}};
+	text-align: left;
+}
+
+.content{ 
+	display: block; 
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	text-align: left;
+}
+
+.sidebar {
+	display: table-cell;
+	vertical-align: top;
+	width:10%;
+	padding:10px 10px 0px 20px;
+	font-family: Oswald;
+	font-size: 70%;
+	text-align: left;
+	background: #{{.SidebarColor}};
+	box-shadow: 0px 0px 10px black inset;
+	-webkit-box-shadow: 0px 0px 10px black inset;
+	-moz-box-shadow: 0px 0px 10px black inset;
+}
+.sticky { top: 0; padding-top: 10px;}
+.sticky ul {padding: 0px; list-style: none;}
+.sticky li { padding-bottom: 25px; }
+
+#title {
+	display: table-row;
+	height: 10%;
+	padding:0;
+	margin:0;
+	font-family: Oswald;
+	background-color: #{{.TitleColor}};
+	font-size: 120%;
+}
+
+#footer{
+	display: table-row;
+    vertical-align: bottom;
+	background-color: #{{.TitleColor}};
+	overflow:hidden;
+	white-space: nowrap;
+	line-height: 20%;
+	height: 10%;
+	font-size: 80%;
+}
+
+a:link {color: #{{.LinkColor}}; text-decoration: underline;}
+a:visited {color: #{{.VisitedLinkColor}}; text-decoration: underline;}
+a:hover {color: #{{.HoverLinkColor}}; text-decoration: underline;}
+
+h2 { font-family: Oswald; }
+
+/* Setup the dropdown menu at the top of the screen */
+.menu {white-space: nowrap;padding:0;margin:0;}
+.menu li {display: inline-block; width: 20%; background:#{{.TitleColor}};padding-bottom:10px;margin:0;}
+.menu li > ul {display: none;}
+.menu li:hover { background:#{{.MenuHoverColor}} }
+.menu li:hover > ul {
+	position: absolute;
+	display: inline;
+	box-shadow: 5px 5px 10px black;
+	-moz-box-shadow: 5px 5px 10px black;
+	-webkit-box-shadow: 5px 5px 10px black;
+	margin-top: 50px;
+	margin-left: -75px;
+	padding:0;
+	font-size:80%;
+	width: 200px;
+	z-index: 1;
+}
+.menu li li {display: block; padding: 10% 75% 10% 10%; margin:0px;font-size: 90%;}
+.menu a {text-decoration: none;} /*color: #{{.LinkColor}};}*/
+
+/* Set images to a certain size */
+.large-image {width: 80%}
+.normal-image {width: 50%}
+.small-image {width: 25%}
+.tiny-image {width: 10%}
+
+#links{ padding-bottom:10px; padding-top:15px;}
+.sidebar a {text-decoration:none;}

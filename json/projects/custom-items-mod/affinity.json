@@ -1,0 +1,77 @@
+{
+	"PageTitle": "Affinity",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Wolfoxymy (Art)"],
+	"Menu": [
+	{
+		"Name": "Features",
+		"Items":[
+		{
+			"Name": "About",
+			"Link": "about"
+		},
+		{
+			"Name": "Gemstones",
+			"Link": "gemstones"
+		},
+		{
+			"Name": "Gems",
+			"Link": "gems"
+		},
+		{
+			"Name": "Affinity",
+			"Link": "affinity"
+		}
+		]
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Tool Affinity",
+		"Id":"tool-affinity",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/258227444652eb1df873c5ef0e744dab.png",
+			"Alt":"Image of a pickaxe with a redstone ore affinity of level 3"
+		}
+		],
+		"Text":[
+		"Affinity is gained randomly on a tool when you identify it. A tool can get an affinity towards any block it digs effectively. Each level of the affinity increases the speed at which the tool breaks that block. The more the player breaks that block with the tool the more the tool levels up. The max Affinity level is 10 and the experience to the next level is exponential (meaning 10 exp to level 2 but 20 exp to level 3 and so on)."
+		]
+	},
+	{
+		"Title":"Weapon Affinity",
+		"Id":"weapon-affinity",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"http://i.imgur.com/OSnBAXj.png",
+			"Alt":"Image of a weapon with a spider affinity of level 2"
+		}
+		],
+		"Text":[
+		"Affinity is gained randomly on a weapon when you identify it. A weapon can get an affinity towards any mob in the game when it is identified. Each level of the affinity increases the damage the weapon does to that mob. The more the player kills those mobs with the weapon the more the weapon levels up. The max Affinity level is 10 and the experience to the next level is exponential (meaning 10 exp to level 2 but 20 exp to level 3 and so on)."
+		]
+	},
+	{
+		"Title":"Totems",
+		"Id":"totems",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"http://i.imgur.com/sYzrFWu.png",
+			"Alt":"Image of a totem of a spider"
+		}
+		],
+		"Text":[
+		"Note: This is planned to be removed on future updates due to issues with mobs attacking each other.",
+		"Totems are dropped very rarely by the mob the totem is for. Can be attached to any weapon with an Affinity to the mob of the totem. Use an identification scroll on a totem to find out which mob it is for and to attach it to a weapon. Every monster has a 2.5% chance to drop a totem of it's own type. For every affinity level of the weapon with a totem there is a 5% chance that whenever you hit a mob of the affinity it will attack nearby mobs (doesn't work on some mobs like pigmen, zombies, and spiders). The means if you have a weapon with a lvl 10 blaze affinity and a blaze totem attached then there is a %50 chance every time you hit it that it will attack the nearest monster or creature to it within 16 blocks."
+		]
+	}
+	]
+}

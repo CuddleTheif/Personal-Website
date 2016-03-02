@@ -1,0 +1,100 @@
+{
+	"PageTitle": "Settings",
+	"Updated": "11/18/2015",
+	"Menu": [
+	{
+		"Name": "Features",
+		"Items":[
+		{
+			"Name": "About",
+			"Link": "about"
+		},
+		{
+			"Name": "Settings",
+			"Link": "settings"
+		},
+		{
+			"Name": "AI",
+			"Link": "ai"
+		},
+		{
+			"Name": "Moderator",
+			"Link": "moderator"
+		}
+		]
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Difficulty & Moderator",
+		"Id":"difficulty-mod",
+		"Images":[
+		{
+			"Size":"small",
+			"Src":"https://i.gyazo.com/cf02bf34fc13555cefc2eae9227bffda.gif",
+			"Alt":"Gif of the diffculty setting"
+		},
+		{
+			"Size":"small",
+			"Src":"https://i.gyazo.com/4f200bdc7e81ba841ea3bdfa37dcb526.gif",
+			"Alt":"Gif of the moderator setting"
+		}
+		],
+		"Text":[
+		"You can change the diffculty of the ai in the game ranging from the challenging \"easy\" to the impossible to beat, \"Ultimate\"! See the <a href=\"ai\">AI</a> section for more info about the different diffculties.",
+		"You can also turn on and off Moderator mode. See the <a href=\"moderator\">Moderator</a> section to learn what it is."
+		]
+	},
+	{
+		"Title":"Speed",
+		"Id":"speed",
+		"Images":[
+		{
+			"Size":"small",
+			"Src":"https://i.gyazo.com/e60ce45c2d5f85203434145551947103.gif",
+			"Alt":"Gif of the speed setting"
+		}
+		],
+		"Text":[
+		"You can change the speed of the game ranging from the relaxing \"Slow\" to the ridiculous, \"Fastest\"! The speed changes both the balls speed and the padles. (Warning! The game may run faster on faster computers!)"
+		]
+	},
+	{
+		"Title":"Color & Resolution",
+		"Id":"color-res",
+		"Images":[
+		{
+			"Size":"small",
+			"Src":"https://i.gyazo.com/21e45763eabb0237f670c0188a2cd89e.gif",
+			"Alt":"Gif of the color setting"
+		},
+		{
+			"Size":"small",
+			"Src":"https://i.gyazo.com/f671be463e0775e881c172fedb84f45c.gif",
+			"Alt":"Gif of the resoultion setting"
+		}
+		],
+		"Text":[
+		"You can also change both the colors of the game and the resolution of the screen. It won't allow you to pick a higher res than your current screen. If your screen's res is not in the list of resolutions than the Other option will set it to your screen. Otherwise the Other option will do nothing."
+		]
+	},
+	{
+		"Title":"Controls",
+		"Id":"controls",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/9321f06cd5197b9d9e0d71de0d8e5212.gif",
+			"Alt":"Gif of the control settings"
+		}
+		],
+		"Text":[
+		"You can change the controls of both player 1 and player 2 (player 2 is only used in multiplayer). To change the controls just click on the current control and then press the keyboard button you wish to be the new control."
+		]
+	}
+	]
+}

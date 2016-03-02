@@ -1,0 +1,54 @@
+{
+	"PageTitle": "Moderator",
+	"Updated": "11/18/2015",
+	"Menu": [
+	{
+		"Name": "Features",
+		"Items":[
+		{
+			"Name": "About",
+			"Link": "about"
+		},
+		{
+			"Name": "Settings",
+			"Link": "settings"
+		},
+		{
+			"Name": "AI",
+			"Link": "ai"
+		},
+		{
+			"Name": "Moderator",
+			"Link": "moderator"
+		}
+		]
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Demo",
+		"Id":"demo",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/1c3e6d1ee000678c0c99b8ecd79d19a8.gif",
+			"Alt":"Gif of a player vs player with moderator"
+		}
+		],
+		"Text":[
+		"The paddle in the center is added by moderator mode."
+		]
+	},
+	{
+		"Title":"Moderator Explained",
+		"Id":"mod-explained",
+		"Text":[
+		"Moderator mode adds a paddle to the center of the field and the player farther from the ball gets control of the paddle. For example, If the ball is on the right side of the field player 1 gets control of the middle paddle and if the ball is on the left side of the field player 2 gets control of the middle paddle. Otherwise the player gets control of his/her orginal paddle."
+		]
+	}
+	]
+}

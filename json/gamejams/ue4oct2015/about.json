@@ -1,0 +1,60 @@
+{
+	"PageTitle": "Unreal GameJam Oct 2015",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Alek Wagner", "Peter Mize"],
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Game",
+		"Link": "game"
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Theme",
+		"Id":"theme",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://forums.unrealengine.com/attachment.php?attachmentid=62911&stc=1",
+			"Alt":"Image of the theme banner"
+		}
+		],
+		"Text":[
+		"The theme in this game jam was \"Standing on the shoulders of giants\". It was a MegaJam this time so the jam lasted 1 week instead of 3 and half days."
+		]
+	},
+	{
+		"Title":"Dwarves Among Us",
+		"Id":"dwarves-among-us",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/7b0a1e5166d1ec3d7fdbce8830adfaa2.png",
+			"Alt":"Image of the main menu"
+		}
+		],
+		"Text":[
+		"We used the theme to come up with our game dwarves among us. It's a game were you land on the inner planet of each solar system and have to hop your way to the outer most planet so you can fly to the next solar system."
+		]
+	},
+	{
+		"Title":"Highlight",
+		"Id":"highlight",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/0860dde98173e8bf9cfabba707288263.gif",
+			"Alt":"Gif of highlight of our game."
+		}
+		]
+	}
+	]
+}

@@ -1,0 +1,74 @@
+{
+	"PageTitle": "Maze of Disease",
+	"Updated": "11/18/2015",
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Game",
+		"Link": "game"
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Gameplay",
+		"Id":"gameplay",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/9a86ca9b7905b022f16e654c6487bb4d.png",
+			"Alt":"Image of virus help menu."
+		},
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/a13b9f5e2bc45426c501005007934ab5.png",
+			"Alt":"Image of pill help menu."
+		}
+		],
+		"Text":[
+		"The game is a 3D First person maze game. You can choose the size of the flesh maze of the game when you start the current server or local game. You use WASD, arrow keys, or gamepad left stick to move and mouse or gamepad right stick to look around. You can use either left click, space, numpad 0, or any gamepad button or trigger to place a bomb or infect walls."
+		]
+	},
+	{
+		"Title":"Synopsis",
+		"Id":"synopsis",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/c7dea77a38433c26f4822c2f9729396d.gif",
+			"Alt":"Gif of infecting walls"
+		},
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/5b5a3f17ff28d664de8bbe5fd0a59109.gif",
+			"Alt":"Gif of blowing up walls."
+		}
+		],
+		"Text":[
+		"You explore a maze of flesh either placing bombs to kill viruses or doging bombs and infecting walls. If all the viruses die then the pills win but if all the walls get destoryed and/or infected then the viruses win."
+		]
+	},
+	{
+		"Title":"Notable Features",
+		"Id":"notable-features",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/e6707341e54d8e8f89a47cf664b76d8a.png",
+			"Alt":"Image of game lobby"
+		}
+		],
+		"Text":[
+		"You can change your player's color when you start a game.",
+		"You can generate any maze up to 300x300 (warning! higher sizes may take longer to load)",
+		"Compatible with steam multiplayer"
+		]
+	}
+	]
+}

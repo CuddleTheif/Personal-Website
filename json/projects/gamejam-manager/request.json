@@ -1,0 +1,85 @@
+{
+  "PageTitle": "Requests",
+  "Updated": "11/18/2015",
+  "Menu": [
+    {
+      "Name": "Features",
+      "Items": [
+        {
+          "Name": "About",
+          "Link": "about"
+        },
+		{
+          "Name": "Playthrough List",
+          "Link": "playthrough"
+        },
+		{
+          "Name": "Request List",
+          "Link": "request"
+        }
+      ]
+    },
+    {
+      "Name": "Download",
+      "Link": "download"
+    }
+  ],
+  "Content": [
+    {
+      "Title": "List",
+      "Id": "list",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/bc94d156dc3afd94a79dd1ef40390c93.png",
+          "Alt": "Picture of the a basic request list."
+        }
+      ],
+      "Text": [
+        "You can create a request list to keep track of games that are requested and in what order!"
+      ]
+    },
+	{
+      "Title": "Add Game",
+      "Id": "add-game",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/a8676143e9b4144f7e60fb4c050e138f.gif",
+          "Alt": "Gif of adding a game to the list."
+        }
+      ],
+      "Text": [
+        "Press the '+' button to add a game to the list and it will prompt you for the game number from the games in your playthrough list. Keep in mind you can't add a number that is already on the list!"
+      ]
+    },
+	{
+      "Title": "Remove Game",
+      "Id": "remove-game",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/369a1912424dc7ddc53e27347698a7c2.gif",
+          "Alt": "Gif of removing a game from the list."
+        }
+      ],
+      "Text": [
+        "Select the game you want to remove and click the '-' button to remove it. It will ask if you want to remove it just from this list or the playthrough list overall. Warning! If you remove it from the playthrough list it will remove it from all other request lists as well."
+      ]
+    },
+	{
+      "Title": "Move Up/Down",
+      "Id": "move-up-down",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/aa2cb5b48905703f6e0e3d044ba20ede.gif",
+          "Alt": "Gif of changing the order of games on the list."
+        }
+      ],
+      "Text": [
+        "You can change the order of the games on the list by pressing the up and down buttons!"
+      ]
+    }
+  ]
+}

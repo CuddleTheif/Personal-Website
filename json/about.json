@@ -1,0 +1,127 @@
+{
+	"PageTitle": "NecroTheif's Website",
+	"Updated": "2/11/2016",
+	"Menu": [
+	{
+		"Name": "Projects",
+		"Items":[
+		{
+			"Name": "Custom Items Mod",
+			"Link": "projects/custom-items-mod/"
+		},
+		{
+			"Name": "Maze Creator",
+			"Link": "projects/maze-creator/"
+		},
+		{
+			"Name": "GJ Play Manager",
+			"Link": "projects/gamejam-manager/"
+		},
+		{
+			"Name": "USCB Tower Defense",
+			"Link": "projects/uscb-tower-defense/"
+		},
+		{
+			"Name": "Pong",
+			"Link": "projects/pong/"
+		}
+		]
+	},
+	{
+		"Name": "Game Jams",
+		"Items":[
+		{
+			"Name": "UE4 Sept 2015",
+			"Link": "gamejams/ue4sept2015/"
+		},
+		{
+			"Name": "UE4 Oct 2015",
+			"Link": "gamejams/ue4oct2015/"
+		},
+		{
+			"Name": "UE4 Nov 2015",
+			"Link": "gamejams/ue4nov2015/"
+		}
+		]
+	},
+	{
+		"Name": "Github",
+		"Items":[
+		{
+			"Name": "Minotaur Escape",
+			"Link": "https://github.com/svaswani/MinotaurEscape"
+		},
+		{
+			"Name": "USCB Tower Defense",
+			"Link": "https://github.com/NecroTheif/USCB-Tower-Defense"
+		},
+		{
+			"Name": "Maze of Wonders",
+			"link": "https://github.com/NecroTheif/e4jamFeb2016"
+		}
+		]
+	}
+	],
+	"Content": [
+	{
+		"Title":"Welcome!",
+		"Id":"welcome",
+		"Text":[
+		"Welcome to my page! This is a website for both showing off my projects and for telling the world about my experinces with different softwares, programming languages and more!"
+		]
+	},
+	{
+		"Title":"This Website",
+		"Id":"website",
+		"Images":[
+		{
+			"Size":"tiny",
+			"Src":"https://raw.github.com/golang-samples/gopher-vector/master/gopher.png",
+			"Alt":"Image of the golang gopher."
+		},
+		{
+			"Size":"tiny",
+			"Src":"http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png",
+			"Alt":"Image of the HTML logo."
+		},
+		{
+			"Size":"tiny",
+			"Src":"https://ritterit-programming.wikispaces.com/file/view/css3_logo.png/398137586/css3_logo.png",
+			"Alt":"Image of the CSS logo."
+		},
+		{
+			"Size":"tiny",
+			"Src":"http://4.bp.blogspot.com/-JHt1aIka_YU/UVR-GQN1eoI/AAAAAAAAAVY/Ef9kmpMRGM4/s1600/JavascriptLogo.png",
+			"Alt":"Image of the JS logo."
+		},
+		{
+			"Size":"tiny",
+			"Src":"http://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1024px-JSON_vector_logo.svg.png",
+			"Alt":"Image of the JSON logo."
+		},
+		{
+			"Size":"tiny",
+			"Src":"https://hype-free.googlecode.com/svn/trunk/geekmeet-ro/gae_presentation/images/appengine_logo.png",
+			"Alt":"Image of the Google App Engine logo."
+		}
+		],
+		"Text":[
+		"This website was made by me from scratch using golang, javascript, html, css, json, and the google app engine. Most of the images used are free to share and use or screenshots I have taken myself. <!--Check out my <a href=\"\" title=\"This blog doesn't exist yet!\">\"Making a website using Go\"</a> section in my blog for more info!-->"
+		]
+	},
+	{
+		"Title":"About Me",
+		"Id":"about-me",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0b7/108/1b8d5a7.jpg",
+			"Alt":"Image of me."
+		}
+		],
+		"Text":[
+		"I am mostly a programmer but I also do design, animation, and a few other things. I have been programming since 2010 and know many different lanuages including Java, Ruby, Go, Lua, C#, C++, and more. I also am a student at RIT in Game Design and Development. I love to play, design, and program video games. I also love to learn about many diffrent programming applications from web desgin to physics engines."
+		]
+	}
+	]
+}

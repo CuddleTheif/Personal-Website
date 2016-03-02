@@ -1,0 +1,183 @@
+{
+  "PageTitle": "Maze Generator",
+  "Updated": "11/18/2015",
+  "Menu": [
+    {
+      "Name": "Features",
+      "Items": [
+        {
+          "Name": "About",
+          "Link": "about"
+        },
+		{
+          "Name": "Generating Mazes",
+          "Link": "generation"
+        },
+		{
+          "Name": "Editing Mazes",
+          "Link": "editing"
+        },
+		{
+          "Name": "Settings",
+          "Link": "settings"
+        },
+		{
+          "Name": "Save/Open",
+          "Link": "saveopen"
+        }
+      ]
+    },
+    {
+      "Name": "Download",
+      "Link": "download"
+    },
+	{
+      "Name": "API",
+      "Link": "api"
+    }
+  ],
+  "Content": [
+    {
+      "Title": "Generate Menu",
+      "Id": "generate-menu",
+      "Images": [
+        {
+          "Size": "small",
+          "Src": "https://i.gyazo.com/c3811876d3fb6c9d66258dd3eabdeff9.png",
+          "Alt": "Picture of the generation menu."
+        }
+      ],
+      "Text": [
+        "To open this menu just click File->New or press Ctrl+N. With it you can generate a maze of any size! (Warning! Large sizes may cause large loading times and even freezing! I suggest not going over 100 in width or height) and to generate it you can pick one of 8 different Algorithms(with 3 variations)! No idea what each algorithm does? Don't worry. You can either, just try them to see what they do, or look below for examples of each one!"
+      ]
+    },
+	{
+      "Title": "Blank",
+      "Id": "blank",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/b0eeb497be264eacc2186e4399ac8cd4.png",
+          "Alt": "A bunch of unfiorm squares."
+        }
+      ]
+    }
+	,
+	{
+      "Title": "Depth-first search",
+      "Id": "depth-first",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/889a891431feb053c7b5b9c529f0b3c8.png",
+          "Alt": "A generic looking maze."
+        }
+      ]
+    }
+	,
+	{
+      "Title": "Recursive division",
+      "Id": "recursive",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "",
+          "Alt": "INSERT IMAGE OF A MAZE GENERATED USING RECURIVE DIVISON."
+        }
+      ]
+    }
+	,
+	{
+      "Title": "Kruskal's algorithm",
+      "Id": "kruskal",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/96d1a3f9fd9bb91c9bf98b433ce52c6c.png",
+          "Alt": "A maze with a lot of short dead ends."
+        }
+      ]
+    }
+	,
+	{
+      "Title": "Prim's algoritm",
+      "Id": "prim",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/317b5895665908153c1764a2a832de4a.png",
+          "Alt": "A maze with a lot of slighlty longer dead ends."
+        }
+      ]
+    }
+	,
+	{
+      "Title": "Eller's algorithm by row",
+      "Id": "eller-row",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/336a079eb93ea852c5314b2095f2f0f5.png",
+          "Alt": "A maze with a lot of long vertical pathways."
+        }
+      ]
+    }
+	,
+	{
+      "Title": "Eller's algorithm by column",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/4f9d45871b9f3b01f2ae3748ada1af6b.png",
+          "Alt": "A maze with a lot of long horizontal pathways."
+        }
+      ]
+    }
+	,
+	{
+      "Title": "Hunt-and-kill algorithm",
+      "Id": "hunt-kill",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/b97419774ba7fb26ee7644ec8885d825.png",
+          "Alt": "A generic looking maze with more turns."
+        }
+      ]
+    }
+	,
+	{
+      "Title": "Growing tree algorithm 75/25",
+      "Id": "grow-75",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/3e6cd26911cc17651c1d1ae219ed511e.png",
+          "Alt": "A generic looking maze with long pathways."
+        }
+      ]
+    }
+	,
+	{
+      "Title": "Growing tree algorithm 50/50",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/38c8951369acd74f1bc4ad87bc58679d.png",
+          "Alt": "A generic looking maze with more 'open space'."
+        }
+      ]
+    }
+	,
+	{
+      "Title": "Growing tree algorithm 25/75",
+      "Images": [
+        {
+          "Size": "large",
+          "Src": "https://i.gyazo.com/375572334dd0caf1bb93839ff00fb74a.png",
+          "Alt": "A generic looking maze lots of dead ends."
+        }
+      ]
+    }
+  ]
+}

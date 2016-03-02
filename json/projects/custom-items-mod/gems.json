@@ -1,0 +1,160 @@
+{
+	"PageTitle": "Gems",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Wolfoxymy (Art)"],
+	"Menu": [
+	{
+		"Name": "Features",
+		"Items":[
+		{
+			"Name": "About",
+			"Link": "about"
+		},
+		{
+			"Name": "Gemstones",
+			"Link": "gemstones"
+		},
+		{
+			"Name": "Gems",
+			"Link": "gems"
+		},
+		{
+			"Name": "Affinity",
+			"Link": "affinity"
+		}
+		]
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Diamond",
+		"Id":"diamond",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/K7N0UdS.png",
+			"Alt":"Image of a diamond with falvor text."
+		}
+		],
+		"Text":[
+		"From vanilla minecraft. Gives your items lighting effects. On a Sword or Tool it has a chance of teleporting the entity hit with the weapon, up 5 blocks and then strike them with lightning. On a bow it has a chance to strike the entity hit, with an arrow from the bow, with lightning. On armor it has a chance to hit an entity, that hit you, with lightning."
+		]
+	},
+	{
+		"Title":"Emerald",
+		"Id":"emerald",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/9HWTOEM.png",
+			"Alt":"Image of a emerald with falvor text."
+		}
+		],
+		"Text":[
+		"From vanilla minecraft. Gives your items poison effects. On a Sword, Tool, or Bow it has a chance to poison the entity hit with the weapon. On armor it has a chance to poison any entity that hit you."
+		]
+	},
+	{
+		"Title":"Ruby",
+		"Id":"ruby",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/WkO6fvG.png",
+			"Alt":"Image of a ruby with falvor text."
+		}
+		],
+		"Text":[
+		"Found in it's respective <a href=\"gemstones\">gemstone</a>. Makes your items give you strength. On a Sword, Tool, or Bow it increases the attack of the weapon. On armor it increase your max health while wearing it."
+		]
+	},
+	{
+		"Title":"Alexandrite",
+		"Id":"alexandrite",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/EbJSHiF.png",
+			"Alt":"Image of a alexandrite with falvor text."
+		}
+		],
+		"Text":[
+		"Found in it's respective <a href=\"gemstones\">gemstone</a>. Gives your items draining affects. On a sword, tool, or bow it has a chance to heal the user part of damage done to an entity. On armor it has a chance to heal the user part of the damage that would have been done to user on hit instead of getting hurt."
+		]
+	},
+	{
+		"Title":"Aquamarine",
+		"Id":"aquamarine",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/AGp65yh.png",
+			"Alt":"Image of a aquamarine with falvor text."
+		}
+		],
+		"Text":[
+		"Found in it's respective <a href=\"gemstones\">gemstone</a>. Gives your item powers while the user is wet. If on a tool, it gives the user increased dig speed while wet. If on a weapon, it gives the user increased attack while wet. If on armor, it gives the user resistance while wet."
+		]
+	},
+	{
+		"Title":"Opal",
+		"Id":"opal",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/ZFxg2g0.png",
+			"Alt":"Image of a opal with falvor text."
+		}
+		],
+		"Text":[
+		"Found in it's respective <a href=\"gemstones\">gemstone</a>. It gives the items \"reflections.\" On a sword or bow it makes the user invisible while using the item (more gems means a longer time). On armor or a tool it makes the user invisible while sneaking (more gems means a longer time)."
+		]
+	},
+	{
+		"Title":"Sapphire",
+		"Id":"sapphire",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/n0ruKTr.png",
+			"Alt":"Image of a sapphire with falvor text."
+		}
+		],
+		"Text":[
+		"Found in it's respective <a href=\"gemstones\">gemstone</a>. Gives the items chilling effects. On a sword, or tool it gives the entity hit by the weapon, slowness. On armor it gives the user knock-back resistance. On a bow it has a chance to freeze an entity hit into an ice chamber."
+		]
+	},
+	{
+		"Title":"Spinel",
+		"Id":"spinel",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/RHa1aD7.png",
+			"Alt":"Image of a spinel with falvor text."
+		}
+		],
+		"Text":[
+		"Found in it's respective <a href=\"gemstones\">gemstone</a>. Gives the items a \"fake\" strength. On a sword, tool, or bow it has a chance to either hurt the user when hitting an entity instead or hurt the entity hit 3 times as much. On armor it has a chance to either hurt the user more when hit or reflect the damage that would be done to the user back onto the attacker."
+		]
+	},
+	{
+		"Title":"Topaz",
+		"Id":"topaz",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"http://i.imgur.com/nPsynEv.png",
+			"Alt":"Image of a topaz with falvor text."
+		}
+		],
+		"Text":[
+		"Found in it's respective <a href=\"gemstones\">gemstone</a>. Give the items speed effects. While on a sword or bow increases movement speed while using the item. On armor it increase movement speed in general. On Tool it increase digging speed with that tool."
+		]
+	}
+	]
+}

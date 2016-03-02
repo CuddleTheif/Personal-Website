@@ -1,0 +1,29 @@
+{
+	"PageTitle": "Download",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Jacob Delello", "Alek Wagner", "Nicole Moore"],
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Showcase",
+		"Link": "showcase"
+	},
+	{
+		"Name": "Demo",
+		"Link": "https://youtu.be/UiNnS-dqd2I"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Thanks for Wanting to Download",
+		"Id":"thanks",
+		"Text":[
+		"<a href=\"https://storage.googleapis.com/necro-theif.appspot.com/downloads/APDRA_MazeOfDiease.zip\">Direct Download</a>",
+		"To support me, use <a href=\"http://adf.ly/1S1s4S\">this download</a>."
+		]
+	}
+	]
+}

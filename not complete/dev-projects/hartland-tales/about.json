@@ -1,0 +1,32 @@
+{
+	"PageTitle": "NecroTheif's Website",
+	"Updated": "11/18/2015",
+	"Message": "This project is no longer being developed! Keep that in mind when browsing these pages.",
+	"Menu": [
+	{
+		"Name": "Features",
+		"Items":[
+		{
+			"Name": "About",
+			"Link": "about"
+		}
+		]
+	}
+	],
+	"Content": [
+	{
+		"Title":"Basis",
+		"Id":"basis",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"",
+			"Alt":"Put an image here"
+		}
+		],
+		"Text":[
+		"Put some descriptive info here"
+		]
+	}
+	]
+}

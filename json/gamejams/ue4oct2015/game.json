@@ -1,0 +1,71 @@
+{
+	"PageTitle": "Dwarves Among Us",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Alek Wagner", "Peter Mize"],
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Game",
+		"Link": "game"
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Gameplay",
+		"Id":"gameplay",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/40eaad8e373a6b10acbdfec5c85e8ad1.gif",
+			"Alt":"Gif of getting hit by an asteroid in game"
+		}
+		],
+		"Text":[
+		"The game is a 3D platformer where you hop from planet to planet. You use a mouse to rotate your character and space to leap from planet to planet. You use Left Click to jump over asteroids and right click to duck under them."
+		]
+	},
+	{
+		"Title":"Synopsis",
+		"Id":"synopsis",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/3dbf17ded5b518990542a0481f848272.gif",
+			"Alt":"Gif of the intro scene."
+		},
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/44de8f21657ab456b2a0c7dd7f9d69e4.gif",
+			"Alt":"Gif of the exit scene."
+		}
+		],
+		"Text":[
+		"There are 15 levels increasing diffculty each level starting for just normal hopping to planets on tilted rotations, at different levels, and even asteroids flying at the player!"
+		]
+	},
+	{
+		"Title":"Notable Features",
+		"Id":"notable-features",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/e870c0a1fd2b705d4a49528f20d35eb9.gif",
+			"Alt":"Gif of changing player's color."
+		}
+		],
+		"Text":[
+		"You can change your player's primary and secondary color in the settings.",
+		"Asteroids come in two forms, ones you have to jump over and ones you have to duck under.",
+		"You can change the game's diffculty in the settings menu.",
+		"If you beat all 15 levels you unlock a level select and a \"cheat mode\"."
+		]
+	}
+	]
+}

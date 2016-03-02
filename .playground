@@ -1,0 +1,7 @@
+{
+  "project_name": "NecroTheif",
+  "project_description": "A website about my projects, past, present, and future.",
+  "show_files": [
+    "app.yaml"
+  ]
+}

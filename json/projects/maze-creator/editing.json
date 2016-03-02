@@ -1,0 +1,89 @@
+{
+  "PageTitle": "Maze Generator",
+  "Updated": "11/18/2015",
+  "Menu": [
+    {
+      "Name": "Features",
+      "Items": [
+        {
+          "Name": "About",
+          "Link": "about"
+        },
+		{
+          "Name": "Generating Mazes",
+          "Link": "generation"
+        },
+		{
+          "Name": "Editing Mazes",
+          "Link": "editing"
+        },
+		{
+          "Name": "Settings",
+          "Link": "settings"
+        },
+		{
+          "Name": "Save/Open",
+          "Link": "saveopen"
+        }
+      ]
+    },
+    {
+      "Name": "Download",
+      "Link": "download"
+    },
+	{
+      "Name": "API",
+      "Link": "api"
+    }
+  ],
+  "Content": [
+    {
+      "Title": "Removing and Adding Walls",
+      "Id": "rm-add-walls",
+      "Images": [
+        {
+          "Size": "small",
+          "Src": "https://i.gyazo.com/b1ca50306b2e030a245b7281b0da4d59.gif",
+          "Alt": "Gif of removing walls from a grid."
+        },
+		{
+          "Size": "small",
+          "Src": "https://i.gyazo.com/11a7be546b918015ab36419cbdd4db81.gif",
+          "Alt": "Gif of adding walls to an empty grid."
+        }
+      ],
+      "Text": [
+        "Right-click a wall to remove it. You can also hold right-click and drag your mouse to remove multiple walls!",
+		"Left-click a wall slot to add a wall. You can also hold left-click and drag your mouse to add multiple walls!"
+      ]
+    },
+	{
+      "Title": "Fill Tool",
+      "Id": "fill-tool",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/731cefc2030c9ee747c371962fb02f06.gif",
+          "Alt": "Gif of Filling parts of a grid."
+        }
+      ],
+      "Text": [
+        "Shift-click the first tile (Or start fill mode by clicking Edit->Fill and then click the first tile) then click the second tile (left for fill walls, right for remove walls) to fill the area between the two selected tiles."
+      ]
+    },
+	{
+      "Title": "Undo and Redo",
+      "Id": "undo-redo",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/7fce235af7346f48b1ce0119812c903a.gif",
+          "Alt": "Gif of undoing and redoing changes in a grid."
+        }
+      ],
+      "Text": [
+        "You can undo any change of tile, fill, change of entrance, change of exit, or resize(See <a href=\"settings\">Settings</a>) by clicking Edit->Undo or pressing Ctrl+Z. You can also redo anything undone by clicking Edit->Redo or pressing Shift+Ctrl+Z or pressing Ctrl+Y."
+      ]
+    }
+  ]
+}

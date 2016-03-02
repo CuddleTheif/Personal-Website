@@ -1,0 +1,76 @@
+{
+	"PageTitle": "Gemstones",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Wolfoxymy (Art)"],
+	"Menu": [
+	{
+		"Name": "Features",
+		"Items":[
+		{
+			"Name": "About",
+			"Link": "about"
+		},
+		{
+			"Name": "Gemstones",
+			"Link": "gemstones"
+		},
+		{
+			"Name": "Gems",
+			"Link": "gems"
+		},
+		{
+			"Name": "Affinity",
+			"Link": "affinity"
+		}
+		]
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Different Types",
+		"Id":"types",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"http://i.imgur.com/JvexS28.png",
+			"Alt":"Image of the gemstones in the game"
+		}
+		],
+		"Text":[
+		"There are 7 different gemstones added by this mod. Each gemstone corsponds with each <a href=\"gems\">gem</a> added by this mod. (See image above for which goes with which one)."
+		]
+	},
+	{
+		"Title":"Generation",
+		"Id":"generation",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/16d0fa7c2eb38e7e378d178bd3c292f1.png",
+			"Alt":"Image a gemstone underground"
+		}
+		],
+		"Text":[
+		"Gemstones are spawned in small clusters with every side except one looking just like stone! This works even if you have a texture pack changing the look of stone! The gemstones spawn in layers so, for example, rubies will never be on the same level as sapphire."
+		]
+	},
+	{
+		"Title":"Shards",
+		"Id":"shards",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/56f53a005cd5001e0b40bf7966ea721e.png",
+			"Alt":"Image of gem shards"
+		}
+		],
+		"Text":[
+		"If you break gemstones with anything other than shards then instead of a gem it will drop a gem shard! Currently, these are useless items (may have a purpose in a later update), so try to be careful when minning or you'll end up with only useless shards!"
+		]
+	}
+	]
+}

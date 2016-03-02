@@ -1,0 +1,65 @@
+{
+	"PageTitle": "In Extremis",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Alek Wagner", "Peter Mize", "Demetrius Rhodes", "Rebecca Glen"],
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Game",
+		"Link": "game"
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Gameplay",
+		"Id":"gameplay",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/01d0f138da174e06ef7c25b1d03f91ba.gif",
+			"Alt":"Gif of platforming in game"
+		}
+		],
+		"Text":[
+		"The game is a 3D platformer where you explore acient ruins and solve puzzels. You use WASD to move, space to jump, and E to interact."
+		]
+	},
+	{
+		"Title":"Synopsis",
+		"Id":"synopsis",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/5ca3fde55b2a08b9a9f8872d538077ac.png",
+			"Alt":"Image of the intro scene."
+		}
+		],
+		"Text":[
+		"Due to this being the first game jam we ever did (and first time working with unreal) we only have an intro level and one puzzel level."
+		]
+	},
+	{
+		"Title":"Notable Features",
+		"Id":"notable-features",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/16ad39d86dac06abca69c538d1ddef18.gif",
+			"Alt":"Gif of breaking boxes."
+		}
+		],
+		"Text":[
+		"You can choose between two different characters at the start of the game.",
+		"The intro scene tells the story of the game while you walk.",
+		"You can break small boxes by stepping on them."
+		]
+	}
+	]
+}

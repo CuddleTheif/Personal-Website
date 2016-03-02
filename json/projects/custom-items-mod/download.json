@@ -1,0 +1,43 @@
+{
+	"PageTitle": "Download",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Wolfoxymy (Art)"],
+	"Menu": [
+	{
+		"Name": "Features",
+		"Items":[
+		{
+			"Name": "About",
+			"Link": "about"
+		},
+		{
+			"Name": "Gemstones",
+			"Link": "gemstones"
+		},
+		{
+			"Name": "Gems",
+			"Link": "gems"
+		},
+		{
+			"Name": "Affinity",
+			"Link": "affinity"
+		}
+		]
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Thanks for Wanting to Download",
+		"Id":"thanks",
+		"Text":[
+		"To Download any version and/or see my update log, check my <a href=\"http://minecraft.curseforge.com/projects/custom-items-mod/files\">curse</a>",
+		"<a href=\"http://minecraft.curseforge.com/projects/custom-items-mod/files/2227167/download\">Direct Download</a>",
+		"To support me, use <a href=\"http://adf.ly/1RzBG4\">this download</a>."
+		]
+	}
+	]
+}

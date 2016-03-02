@@ -1,0 +1,57 @@
+{
+	"PageTitle": "AI",
+	"Updated": "11/18/2015",
+	"Menu": [
+	{
+		"Name": "Features",
+		"Items":[
+		{
+			"Name": "About",
+			"Link": "about"
+		},
+		{
+			"Name": "Settings",
+			"Link": "settings"
+		},
+		{
+			"Name": "AI",
+			"Link": "ai"
+		},
+		{
+			"Name": "Moderator",
+			"Link": "moderator"
+		}
+		]
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Demo",
+		"Id":"demo",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/5f7a37e17296b18f340efb04af44918c.gif",
+			"Alt":"Gif of a player vs Easy AI"
+		}
+		],
+		"Text":[
+		"All the AI were tested agasint each other at high speeds to determine which were better than others. The above demo is me attempting to play the Easy AI."
+		]
+	},
+	{
+		"Title":"AIs",
+		"Id":"ais",
+		"Text":[
+		"Easy - Follows the ball at all times.",
+		"Normal - Goes were the ball would go if it didn't bounce.",
+		"Hard - Guesses where the ball will be when it gets back to its side.",
+		"Ultimate - Knows where the ball will be when it gets back to its side."
+		]
+	}
+	]
+}

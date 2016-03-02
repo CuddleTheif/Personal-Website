@@ -1,0 +1,49 @@
+{
+	"PageTitle": "Download",
+	"Updated": "11/18/2015",
+	"Menu": [
+	{
+	"Name": "Features",
+	"Items": [
+			{
+			  "Name": "About",
+			  "Link": "about"
+			},
+				{
+			  "Name": "Generating Mazes",
+			  "Link": "generation"
+			},
+				{
+			  "Name": "Editing Mazes",
+			  "Link": "editing"
+			},
+				{
+			  "Name": "Settings",
+			  "Link": "settings"
+			},
+				{
+			  "Name": "Save/Open",
+			  "Link": "saveopen"
+			}
+		]
+	},
+	{
+	"Name": "Download",
+	"Link": "download"
+	},
+	{
+	"Name": "API",
+	"Link": "api"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Thanks for Wanting to Download",
+		"Id":"thanks",
+		"Text":[
+		"<a href=\"https://storage.googleapis.com/necro-theif.appspot.com/downloads/MazeCreator.exe\">Direct Download</a>",
+		"To support me, use <a href=\"http://adf.ly/1RzJaf\">this download</a>."
+		]
+	}
+	]
+}

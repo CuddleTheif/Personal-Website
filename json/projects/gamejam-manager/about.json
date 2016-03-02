@@ -1,0 +1,57 @@
+{
+  "PageTitle": "GameJam Playthrough Manager",
+  "Updated": "11/18/2015",
+  "Menu": [
+    {
+      "Name": "Features",
+      "Items": [
+        {
+          "Name": "About",
+          "Link": "about"
+        },
+		{
+          "Name": "Playthrough List",
+          "Link": "playthrough"
+        },
+		{
+          "Name": "Request List",
+          "Link": "request"
+        }
+      ]
+    },
+    {
+      "Name": "Download",
+      "Link": "download"
+    }
+  ],
+  "Content": [
+    {
+      "Title": "Quick Description",
+      "Id": "quick-description",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/2fd63077834f6069f6e6d6472907af52.png",
+          "Alt": "Picture of the GameJam Playthrough Manager program."
+        }
+      ],
+      "Text": [
+        "The GameJam Playthrough Manager program is a program that allows you to easily manage which games you have played in a gamejam playthrough! It also will help you manage requests and deleteted entries."
+      ]
+    },
+	{
+      "Title": "Create New",
+      "Id": "create-new",
+      "Images": [
+        {
+          "Size": "normal",
+          "Src": "https://i.gyazo.com/4c0edc2f18f12af498f23ce8a40e51e0.png",
+          "Alt": "Picture of the new playthrough menu."
+        }
+      ],
+      "Text": [
+        "This menu Is where you create a new playthrough. Here you can name it and set the # of the first and last games in the playthrough. The manager will automatically add every game # in between to your playthrough list!"
+      ]
+    }
+  ]
+}

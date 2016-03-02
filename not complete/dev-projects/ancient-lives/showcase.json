@@ -1,0 +1,106 @@
+{
+	"PageTitle": "Ancient Lives",
+	"Updated": "11/18/2015",
+	"OtherAuthors": ["Jacob Delello", "Alek Wagner", "Nicole Moore"],
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Showcase",
+		"Link": "showcase"
+	},
+	{
+		"Name": "Demo",
+		"Link": "https://youtu.be/UiNnS-dqd2I"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Main Menu",
+		"Id":"main-menu",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://storage.googleapis.com/ancient-lives.appspot.com/images/menumockup.png",
+			"Alt":"Menu Mockup"
+		},
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/196054ccf83108c17bb47fc86d5c6d7d.gif",
+			"Alt":"Menu Animation"
+		}
+		]
+	},
+	{
+		"Title":"Head Movement",
+		"Id":"head-movement",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/3dcd13e4b863e30cc378d7bc58ecb6a7.gif",
+			"Alt":"Head Idle Movement Side View"
+		},
+		{
+			"Size":"normal",
+			"Src":"https://i.gyazo.com/7d6077b9cb5da727e2f18e594728a7ed.gif",
+			"Alt":"Head Idle Movement Front View"
+		}
+		]
+	},
+	{
+		"Title":"Coelophysis Model",
+		"Id":"coelophysis-model",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://storage.googleapis.com/ancient-lives.appspot.com/images/coelophysis-model.gif",
+			"Alt":"Coelophysis Model Rotating"
+		}
+		]
+	},
+	{
+		"Title":"Coelophysis Pose",
+		"Id":"coelophysis-pose",
+		"Images":[
+		{
+			"Size":"normal",
+			"Src":"https://storage.googleapis.com/ancient-lives.appspot.com/images/Pose1.png",
+			"Alt":"Coelophysis Model Pose 1"
+		},
+		{
+			"Size":"normal",
+			"Src":"https://storage.googleapis.com/ancient-lives.appspot.com/images/Pose2.png",
+			"Alt":"Coelophysis Model Pose 2"
+		}
+		]
+	},
+	{
+		"Title":"Coelophysis Color Mockups",
+		"Id":"coelophysis-color",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://storage.googleapis.com/ancient-lives.appspot.com/images/color_mockup_base.png",
+			"Alt":"Coelophysis Model Base color"
+		},
+		{
+			"Size":"normal",
+			"Src":"https://storage.googleapis.com/ancient-lives.appspot.com/images/color_mockup_1.png",
+			"Alt":"Coelophysis Model 1 color"
+		},
+		{
+			"Size":"normal",
+			"Src":"https://storage.googleapis.com/ancient-lives.appspot.com/images/color_mockup_2.png",
+			"Alt":"Coelophysis Model 2 color"
+		},
+		{
+			"Size":"normal",
+			"Src":"https://storage.googleapis.com/ancient-lives.appspot.com/images/color_mockup_3.png",
+			"Alt":"Coelophysis Model 3 color"
+		}
+		]
+	}
+	]
+}

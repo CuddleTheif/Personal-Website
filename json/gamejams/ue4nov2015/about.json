@@ -1,0 +1,59 @@
+{
+	"PageTitle": "Unreal GameJam Oct 2015",
+	"Updated": "11/18/2015",
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Game",
+		"Link": "game"
+	},
+	{
+		"Name": "Download",
+		"Link": "download"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Theme",
+		"Id":"theme",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://dl.dropboxusercontent.com/u/4566086/NovemberJamTheme.png",
+			"Alt":"Image of the theme banner"
+		}
+		],
+		"Text":[
+		"The theme in this game jam was \"DESPERATE DISEASES REQUIRE DANGEROUS REMEDIES\"."
+		]
+	},
+	{
+		"Title":"Maze of Disease",
+		"Id":"maze-of-disease",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"https://i.gyazo.com/90a0cc25493b4bc4cedca0bdcc154247.png",
+			"Alt":"Image of the maze in game"
+		}
+		],
+		"Text":[
+		"I used the theme to come up with our game maze of disease. It's a game were you are either a pill trying to kill all the virsues in the host or a virus trying to infect or destory the host."
+		]
+	},
+	{
+		"Title":"Highlight",
+		"Id":"highlight",
+		"Images":[
+		{
+			"Size":"large",
+			"Src":"",
+			"Alt":"Gif of highlight of our game. (To come...)"
+		}
+		]
+	}
+	]
+}
