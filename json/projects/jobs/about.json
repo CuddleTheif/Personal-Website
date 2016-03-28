@@ -1,0 +1,35 @@
+{
+	"PageTitle": "Game Dev Internship Finder",
+	"Updated": "3/03/2016",
+	"Menu": [
+	{
+		"Name": "About",
+		"Link": "about"
+	},
+	{
+		"Name": "Job List",
+		"Link": "jobs"
+	},
+	{
+		"Name": "GitHub",
+		"Link": "https://github.com/NecroTheif/Internship-Finder"
+	}
+	],
+	"Content": [
+	{
+		"Title":"Summary",
+		"Id":"summary",
+		"Text":[
+		"The program searches through a given a website for links. (i.e. <a href=\"http://gamedevmap.com/\">http://gamedevmap.com/</a>) For each link if looks for keywords having to do with jobs for more pages to search. For everypage it searches it checks if it has keywords having to do with interships and if it finds any it saves the url of the page to a file. As a result at the end you have a file full or urls to pages with interships."
+		]
+	},
+	{
+		"Title":"Specifics",
+		"Id":"specifics",
+		"Text":[
+		"Job keywords - career/job/position/team",
+		"Internship keywords - intern/internship/co-op/student"
+		]
+	}
+	]
+}

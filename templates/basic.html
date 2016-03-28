@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>{{.WebTitle}}</title>
+    <title>{{.PageTitle}}</title>
     <style>{{.StyleSheet}}</style>
     <meta charset="utf-8">
     <script type="text/javascript">{{.Javascript}}</script>
@@ -47,19 +47,20 @@
 				<nav class="sticky">
 					Page Content:
 					<ul>
+						<li><a href="#">Top</a></li>
 						{{range .Content}}
 						{{if .Id}}
 						<li><a href="#{{.Id}}">{{.Title}}</a></li>
 						{{end}}
 						{{end}}
+						<li><a href="#footer">Bottom</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 		
 		<div id="footer">
-			<div id="links"> 
-				<a href="#">Top</a> || 
+			<div id="links">
 				<a href="/">Main Page</a> 
 			</div>
 			<p>Developed By: {{.Author}} {{range .OtherAuthors}} || {{.}} {{end}}</p>

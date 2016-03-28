@@ -25,13 +25,16 @@ body{
 }
 
 #content {
+	overflow:hidden;
 	display: table-cell;
 	vertical-align: middle;
 	line-height: 150%;
 	font-family: Lora;
 	padding: 25px 100px;
-	min-width:500px;
+	width: 80%;
+	height: 80%;
 	margin: 0px;
+	padding: 25px 0;
 	box-shadow: 0px 0px 10px black inset;
 	-moz-box-shadow: 0px 0px 10px black inset;
 	-webkit-box-shadow: 0px 0px 10px black inset;
@@ -45,8 +48,7 @@ body{
 
 .content{ 
 	display: block; 
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	width: 80%;
 	text-align: left;
 }
@@ -55,6 +57,7 @@ body{
 	display: table-cell;
 	vertical-align: top;
 	width:10%;
+	min-width: 100px;
 	padding:10px 10px 0px 20px;
 	font-family: Oswald;
 	font-size: 70%;

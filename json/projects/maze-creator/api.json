@@ -50,6 +50,13 @@
       "Text": [
         ".maz files are just binary files with the following variables in order. First two Int32 of width then height of the maze. Then two more Int32 of the entrance's X and Y position. The two more Int32 of the exit's X and Y position. The rest of the file is booleans of if there is a floor at the current tile or not where the current tile is x*height+y."
       ]
+    },
+	{
+      "Title": "Github",
+      "Id": "github",
+      "Text": [
+        "<a href=\"https://github.com/svaswani/MinotaurEscape\">https://github.com/svaswani/MinotaurEscape</a>"
+      ]
     }
   ]
 }

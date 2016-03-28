@@ -34,4 +34,3 @@ function getTop(element){
 window.onload = loadStickies;
 window.onresize = positionStickies;
 window.onscroll = positionStickies;
-window.onclick = click;

@@ -12,6 +12,8 @@ import (
 
 var htmlTemplate *template.Template
 var pages map[string]BasicHtml
+var styleSheet template.CSS
+var javascript template.JS
 
 func loadFiles() error{
 
@@ -22,21 +24,22 @@ func loadFiles() error{
 	var cssBuff bytes.Buffer
 	err = cssTemplate.Execute(&cssBuff, cssBasic)
 	if(err!=nil){return errors.New("Error Reading CSS: <br/>"+err.Error())}
-	styleSheet := template.CSS(cssBuff.String())
+	styleSheet = template.CSS(cssBuff.String())
 
 	jsTemplates, err := loadTemplates(jsFolder)
 	if(err!=nil){return err}
 	var jsBuff bytes.Buffer
 	err = jsTemplates.Execute(&jsBuff, nil)
 	if(err!=nil){return err}
-	javascript := template.JS(jsBuff.String())
+	javascript = template.JS(jsBuff.String())
 
 	htmlTemplate, err = template.ParseFiles(templatesFolder+"/"+basicTemplateName+".html")
 	if(err!=nil){return err}
 
-	pages, err = loadFolder(jsonFolder, javascript, styleSheet)
+	pages, err = loadFolder(jsonFolder)
 	if(err!=nil){return err}
-	subPages, err := loadSubFolders(jsonFolder, javascript, styleSheet)
+	subPages, err := loadSubFolders(jsonFolder)
+	consoleLog(err)
 	if(err!=nil){return err}
 	for folder,temp := range subPages{pages[folder]=temp}
 
@@ -44,16 +47,16 @@ func loadFiles() error{
 	
 }
 
-func loadSubFolders(dir string, javascript template.JS, styleSheet template.CSS) (map[string]BasicHtml, error){
+func loadSubFolders(dir string) (map[string]BasicHtml, error){
 	files, err := ioutil.ReadDir(dir)
 	if(err!=nil) {return nil, errors.New("Error Reading Directory: "+dir+"<br/>"+err.Error())}
 	curPages := make(map[string]BasicHtml)
 	for _,file := range files{
 		if(file.IsDir()){
-			newPages, err := loadFolder(dir+"/"+file.Name(), javascript, styleSheet)
+			newPages, err := loadFolder(dir+"/"+file.Name())
 			for folder,page := range newPages{curPages[folder]=page}
 			if(err!=nil) {return nil, err}
-			newPages, err = loadSubFolders(dir+"/"+file.Name(), javascript, styleSheet)
+			newPages, err = loadSubFolders(dir+"/"+file.Name())
 			if(err!=nil) {return nil, err}
 			for folder,page := range newPages{curPages[folder]=page}
 		}
@@ -61,7 +64,7 @@ func loadSubFolders(dir string, javascript template.JS, styleSheet template.CSS)
 	return curPages, nil
 }
 
-func loadFolder(dir string, javascript template.JS, styleSheet template.CSS) (map[string]BasicHtml, error){
+func loadFolder(dir string) (map[string]BasicHtml, error){
 	files, err := ioutil.ReadDir(dir)
 	if(err!=nil) {return nil, errors.New("Error Reading Directory: "+dir+"<br/>"+err.Error())}
 	pages := make(map[string]BasicHtml)
@@ -98,6 +101,7 @@ func loadTemplates(dir string) (*template.Template, error){
 }
 
 func loadPage(w http.ResponseWriter, path string, page string){
+	
 	if(page==""){page="about"}
 	if _, exists := pages[jsonFolder+path+"/"+page+".json"]; !exists {
 		loadError(w, errors.New("Page Not Found!"))

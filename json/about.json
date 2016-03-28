@@ -24,6 +24,10 @@
 		{
 			"Name": "Pong",
 			"Link": "projects/pong/"
+		},
+		{
+			"Name": "Internship Finder",
+			"Link": "projects/jobs/"
 		}
 		]
 	},
@@ -45,19 +49,15 @@
 		]
 	},
 	{
-		"Name": "Github",
+		"Name": "Me",
 		"Items":[
 		{
-			"Name": "Minotaur Escape",
-			"Link": "https://github.com/svaswani/MinotaurEscape"
+			"Name": "Github",
+			"Link": "https://github.com/NecroTheif"
 		},
 		{
-			"Name": "USCB Tower Defense",
-			"Link": "https://github.com/NecroTheif/USCB-Tower-Defense"
-		},
-		{
-			"Name": "Maze of Wonders",
-			"link": "https://github.com/NecroTheif/e4jamFeb2016"
+			"Name": "Resume",
+			"Link": "https://storage.googleapis.com/necro-theif.appspot.com/downloads/wetmore-andrew-resume.pdf"
 		}
 		]
 	}

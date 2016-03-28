@@ -78,20 +78,3 @@ func (path *Path) generate() {
 		}
 	}	
 }
-
-// Checks if the given position is in the path
-func (path *Path) contains(x int, y int) bool {
-
-	contains := false
-	for i := 0; i < len(path.segments) && !contains; i++ {
-		xMin := min(path.segments[i].startX, path.segments[i].startX+path.segments[i].distance)
-		xMax := max(path.segments[i].startX, path.segments[i].startX+path.segments[i].distance)
-		yMin := min(path.segments[i].startY, path.segments[i].startY+path.segments[i].distance)
-		yMax := max(path.segments[i].startY, path.segments[i].startY+path.segments[i].distance)
-		if (x == path.segments[i].startX && !path.segments[i].direction && y <= yMin && y >= yMax) || (y == path.segments[i].startY && path.segments[i].direction && x <= xMax && x >=xMin) {
-			contains = true
-		}
-	}
-	return contains
-
-}

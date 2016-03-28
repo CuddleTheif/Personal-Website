@@ -23,6 +23,13 @@
 		"<a href=\"https://storage.googleapis.com/necro-theif.appspot.com/downloads/USCB_Tower_Defense.zip\">Direct Download</a>",
 		"To support me, use <a href=\"http://adf.ly/1Rzm5h\">this download</a>."
 		]
+	},
+	{
+		"Title":"Github",
+		"Id":"github",
+		"Text":[
+		"<a href=\"https://github.com/NecroTheif/USCB-Tower-Defense\">https://github.com/NecroTheif/USCB-Tower-Defense</a>"
+		]
 	}
 	]
 }
