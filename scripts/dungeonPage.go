@@ -36,40 +36,24 @@ func dungeon(w http.ResponseWriter, r *http.Request) {
 		dungeon.generate(rooms, 20)
 
 	// Add the grid add buttons to the actual page (and draw the player in the grid)
-		gridValues := GridTemplate{template.JS(dungeonToJavascript(dungeon)), template.JS(strconv.Itoa(dungeon.startX)), template.JS(strconv.Itoa(dungeon.startY)), styleSheet}
+		gridValues := GridTemplate{template.JS(arrayToJavascript(dungeon.getGrid())), template.JS(strconv.Itoa(dungeon.startX)), template.JS(strconv.Itoa(dungeon.startY)), styleSheet}
 		err := gridTemplate.Execute(w, gridValues)
 		fmt.Fprint(w, err)
 }
 
 // Converts a 2D array to a javascript 2D array as a string
 func dungeonToJavascript(dungeon Dungeon) string{
-	javascript := "{width:"+strconv.Itoa(dungeon.width)+", height:"+strconv.Itoa(dungeon.height)+", walls:"+arrayToJavascript(dungeon.getWalls())+",paths:"+arrayToJavascript(dungeon.getPaths())+",rooms:["
-	for _, room := range dungeon.rooms {
-		javascript += roomToJavascript(room)+","
-	}
-	return javascript[:len(javascript)-1]+"]}"
+	return "{width:"+strconv.Itoa(dungeon.width)+", height:"+strconv.Itoa(dungeon.height)+", grid:"+arrayToJavascript(dungeon.getGrid())+"}"
 }
 
-func roomToJavascript(room Room) string{
-	return "{X:"+strconv.Itoa(room.X)+", Y:"+strconv.Itoa(room.Y)+", Width:"+strconv.Itoa(room.Width)+", Height:"+strconv.Itoa(room.Height)+"}"
-}
-
-func pathToJavascript(path Path) string{
-	javascript := "{startX:"+strconv.Itoa(path.startX)+", startY:"+strconv.Itoa(path.startY)+", endX:"+strconv.Itoa(path.endX)+", endY:"+strconv.Itoa(path.endY)+", segments:["
-	for _, segment := range path.segments {
-		javascript += segmentToJavascript(segment)+","
-	}
-	return javascript[:len(javascript)-1]+"]}"
-}
-
-func segmentToJavascript(segment Segment) string{
-	return "{startX:"+strconv.Itoa(segment.startX)+", startY:"+strconv.Itoa(segment.startY)+", distance:"+strconv.Itoa(segment.distance)+", direction:"+strconv.FormatBool(segment.direction)+"}"
-}
-
-func arrayToJavascript(array []Point) string{
+func arrayToJavascript(array [][]int) string{
 	javascript := "["
-	for _, element := range array {
-		javascript += "{x:"+strconv.Itoa(element.x)+",y:"+strconv.Itoa(element.y)+"},"
+	for _, row := range array {
+		javascript += "["
+		for _, element := range row {
+			javascript += strconv.Itoa(element)+","
+		}
+		javascript = javascript[:len(javascript)-1]+"],"
 	}
 	return javascript[:len(javascript)-1]+"]"
 }

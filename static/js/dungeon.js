@@ -1,4 +1,4 @@
-var dungeonStage, dungeonLayer, characterLayer, player, playerMovements = [], curMovement, dirKeyStack = [];
+var dungeonStage, dungeonLayer, characterLayer, parallaxLayer, player, playerMovements = [], curMovement, dirKeyStack = [], gameLoaded = false;
 const DIRECTIONS = ['Down', 'Left', 'Right', 'Up'], CONTROLS = {'38': 3, '87': 3, '40': 0, '83': 0, '37': 1, '65': 1, '39': 2, '68': 2};
 
 // Gets a sprite's current width
@@ -22,48 +22,57 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Create the stage and layers
 	dungeonStage = new Konva.Stage({
 	  container: 'grid',
-	  width: dungeon.width*scale,
-	  height: dungeon.height*scale
+	  width: dungeon.length*scale,
+	  height: dungeon[0].length*scale
 	});
 	dungeonLayer = new Konva.Layer();
 	characterLayer = new Konva.Layer();
+	parallaxLayer = new Konva.Layer();
 	
-	// Create all the paths first since rooms should be over them
-	for (var i in dungeon.paths)
-		dungeonLayer.add(new Konva.Rect({
-						      x: dungeon.paths[i].x*scale,
-						      y: dungeon.paths[i].y*scale,
-						      width: scale,
-						      height: scale,
-						      fill: 'green',
-						      strokeWidth: 0
-						    }));
-	
-	// Create all the rooms next
-	for (var i in dungeon.rooms)
-		dungeonLayer.add(new Konva.Rect({
-						      x: dungeon.rooms[i].X*scale,
-						      y: dungeon.rooms[i].Y*scale,
-						      width: dungeon.rooms[i].Width*scale,
-						      height: dungeon.rooms[i].Height*scale,
-						      fill: 'red',
-						      strokeWidth: 0
-						    }));
-	
-	// Create all the walls last
-	for (var i in dungeon.walls)
-		dungeonLayer.add(new Konva.Rect({
-						      x: dungeon.walls[i].x*scale,
-						      y: dungeon.walls[i].y*scale,
-						      width: scale,
-						      height: scale,
-						      fill: 'yellow',
-						      strokeWidth: 0
-						    }));
-						      
-	
-	// Add the layer with all the background to the stage (rooms, paths, walls, etc.)
-	dungeonStage.add(dungeonLayer);
+	// Load the tilesheets before making any tiles
+	var floorTileSheet = new Image();
+    floorTileSheet.onload = function() {
+		var wallTileSheet = new Image();
+		wallTileSheet.onload = function() {
+    	
+    		// Draw the tiles in the grid
+    		for(var x=0;x<dungeon.length;x++){
+    			for(var y=0;y<dungeon[x].length;y++){
+    				switch(dungeon[x][y]){
+    					case -1: // nothing = roof tile
+    						addTile(parallaxLayer, {x:x,y:y}, {x:wallTile.x*64, y:wallTile.y*160}, wallTileSheet, function(x, y){return dungeon[x][y]==-1 || (y>0 && dungeon[x][y+1]<=0);}, true);
+    						if(dungeon[x][y-1]!=-1)
+    							addTile(parallaxLayer, {x:x,y:y-1}, {x:wallTile.x*64, y:wallTile.y*160}, wallTileSheet, function(x, y){return dungeon[x][y]==-1 || (y>0 && dungeon[x][y+1]<=0);}, true);
+    						break;
+    					case 0: // wall tile
+    						addTile(dungeonLayer, {x:x,y:y}, {x:wallTile.x*64, y:wallTile.y*160+64}, wallTileSheet, function(x, y){return dungeon[x][y]==0;}, false);
+    						if(dungeon[x][y-1]!=-1)
+    							addTile(parallaxLayer, {x:x,y:y-1}, {x:wallTile.x*64, y:wallTile.y*160}, wallTileSheet, function(x, y){return dungeon[x][y]==-1 || (y>0 && dungeon[x][y+1]<=0);}, true);
+    						break;
+    					case 1: // room tile
+    						dungeonLayer.add(new Konva.Rect({
+							      x: x*scale,
+							      y: y*scale,
+							      width: scale,
+							      height: scale,
+							      fill: 'red',
+							      strokeWidth: 0
+							    }));
+    						break;
+    					case 2: // path tile
+    						addTile(dungeonLayer, {x:x,y:y}, {x:pathTile.x*64, y:pathTile.y*96}, floorTileSheet, function(x, y){return dungeon[x][y]==2;}, true);
+    						break;
+    				}
+    			}
+    		}
+    		
+    		// Mark that the tiles have loaded
+    		loadGame();
+    	
+		};
+    	wallTileSheet.src = 'static/images/placeholder_walls.png';
+    };
+    floorTileSheet.src = 'static/images/placeholder_floors.png';
 						    
 	// Create the sprite for the player
 	var playerImg = new Image();
@@ -115,19 +124,19 @@ document.addEventListener('DOMContentLoaded', function() {
 				    },
         frameRate: 10,
         frameIndex: 0,
-		          scale: { x:scale/64, y:scale/64 }
+		          scale: { x:scale/48, y:scale/48 }
       });
       
       // add the shape to the layer
 	  characterLayer.add(player);
-
-      // add the layer to the stage
-      dungeonStage.add(characterLayer);
+	  
+	  // Mark that the player has been loaded
+	  loadGame();
       
 	  // Update the viewport
 	  updateViewport();
     };
-    playerImg.src = 'static/images/$placeholder_sprite.png';
+    playerImg.src = 'static/images/placeholder_player.png';
     
     // Create the player movement animations
     playerMovements.push(new Konva.Animation(function(frame) {
@@ -149,19 +158,132 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 }, false);
 
+// Gets and adds the tile at the given position with the given variables
+function addTile(layer, position, tilePosition, tileSheet, tester, corners){
+	var subTiles = getSubTiles(position, tilePosition, tester, corners);
+	layer.add(new Konva.Image({
+		x: position.x*scale,
+		y: position.y*scale,
+		image: tileSheet,
+		crop: {x:subTiles.topLeft.x,y:subTiles.topLeft.y,width:16,height:16},
+		width: scale/2,
+		height: scale/2
+	}));
+	layer.add(new Konva.Image({
+		x: position.x*scale,
+		y: position.y*scale+scale/2,
+		image: tileSheet,
+		crop: {x:subTiles.bottomLeft.x,y:subTiles.bottomLeft.y,width:16,height:16},
+		width: scale/2,
+		height: scale/2
+	}));
+	layer.add(new Konva.Image({
+		x: position.x*scale+scale/2,
+		y: position.y*scale,
+		image: tileSheet,
+		crop: {x:subTiles.topRight.x,y:subTiles.topRight.y,width:16,height:16},
+		width: scale/2,
+		height: scale/2
+	}));
+	layer.add(new Konva.Image({
+		x: position.x*scale+scale/2,
+		y: position.y*scale+scale/2,
+		image: tileSheet,
+		crop: {x:subTiles.bottomRight.x,y:subTiles.bottomRight.y,width:16,height:16},
+		width: scale/2,
+		height: scale/2
+	}));
+}
+
+// Gets the relative position of the subtiles of a tile using autotile
+function getSubTiles(pos, tilePos, tester, corners){
+	var subTiles = {topLeft: {x:tilePos.x, y:tilePos.y}, topRight: {x:tilePos.x, y:tilePos.y}, bottomLeft: {x:tilePos.x, y:tilePos.y}, bottomRight: {x:tilePos.x, y:tilePos.y}};
+	// Check for similar tile to left
+	if(pos.x>0 && tester(pos.x-1,pos.y)){
+	  subTiles.topLeft.x += 32;
+	  subTiles.bottomLeft.x += 32;
+	}
+	else{
+	  subTiles.topLeft.x += 0;
+	  subTiles.bottomLeft.x += 0;
+	}
+	
+	// Check for similar tile above
+	if(pos.y > 0 && tester(pos.x,pos.y-1)){
+	  subTiles.topLeft.y += 64;
+	  subTiles.topRight.y += 64;
+	}
+	else{
+	  subTiles.topLeft.y += 32;
+	  subTiles.topRight.y += 32;
+	}
+	
+	// Check for similar tile to the right
+	if(pos.x<dungeon.length-1 && tester(pos.x+1,pos.y)){
+	  subTiles.bottomRight.x += 16;
+	  subTiles.topRight.x += 16;
+	}
+	else{
+	  subTiles.bottomRight.x += 48;
+	  subTiles.topRight.x += 48;
+	}
+	
+	// Check for similar tile below
+	if(pos.y<dungeon[0].length-1 && tester(pos.x,pos.y+1)){
+	  subTiles.bottomRight.y += 48;
+	  subTiles.bottomLeft.y += 48;
+	}
+	else{
+	  subTiles.bottomRight.y += 80;
+	  subTiles.bottomLeft.y += 80;
+	}
+	
+	//Check if corners if needed
+	if(corners){
+	
+		// Check for top left corner
+		if(subTiles.topLeft.x==tilePos.x+32 && subTiles.topLeft.y==tilePos.y+64 && (pos.x<0 || pos.y<0 || !tester(pos.x-1,pos.y-1)))
+			subTiles.topLeft = {x:tilePos.x+32, y:tilePos.y};
+		
+		// Check for top right corner
+		if(subTiles.topRight.x==tilePos.x+16 && subTiles.topRight.y==tilePos.y+64 && (pos.x>dungeon.length-1 || pos.y<0 || !tester(pos.x+1,pos.y-1)))
+			subTiles.topRight = {x:tilePos.x+48, y:tilePos.y};
+		
+		// Check for bottom left corner
+		if(subTiles.bottomLeft.x==tilePos.x+32 && subTiles.bottomLeft.y==tilePos.y+48 && (pos.x<0 || pos.y>dungeon[0].length-1 || !tester(pos.x-1,pos.y+1)))
+			subTiles.bottomLeft = {x:tilePos.x+32, y:tilePos.y+16};
+		
+		// Check for bottom right corner
+		if(subTiles.bottomRight.x==tilePos.x+16 && subTiles.bottomRight.y==tilePos.y+48 && (pos.x>dungeon.length-1 || pos.y>dungeon[0].length-1 || !tester(pos.x+1,pos.y+1)))
+			subTiles.bottomRight = {x:tilePos.x+48, y:tilePos.y+16};
+	}
+	
+	return subTiles;
+}
+
+// After everything has been loaded update the viewport add the layers to the screen
+function loadGame(){
+	if(!gameLoaded)
+		gameLoaded = true;
+	else{
+		updateViewport();
+		dungeonStage.add(dungeonLayer, characterLayer, parallaxLayer);
+	}
+}
+
 // Move the given sprite a certain direction with checking for invaild spaces
 function move(sprite, dir, distance) {
 	var x = dir==1 ? -distance : (dir==2 ? distance : 0);
 	var y = dir==0 ? distance : (dir==3 ? -distance : 0);
 	sprite.x(sprite.x()+x);
 	sprite.y(sprite.y()+y);
-	for (var i=0, found=false;i<dungeon.walls.length && !found;i++){
-		if((dungeon.walls[i].x==Math.trunc((sprite.x())/scale) || dungeon.walls[i].x==Math.trunc((sprite.x()+sprite.getWidth())/scale)) && 
-		(dungeon.walls[i].y==Math.trunc((sprite.y()+sprite.getHeight()/2)/scale) || dungeon.walls[i].y==Math.trunc((sprite.y()+sprite.getHeight())/scale))){
-			found = true;
-			sprite.x(sprite.x()-x);
-			sprite.y(sprite.y()-y);
-		}
+	if(dungeon[Math.trunc(sprite.x()/scale)][Math.trunc((sprite.y()+sprite.getHeight()/2)/scale)]<=0 || 
+		dungeon[Math.trunc((sprite.x()+sprite.getWidth())/scale)][Math.trunc((sprite.y()+sprite.getHeight()/2)/scale)]<=0 ||
+		dungeon[Math.trunc(sprite.x()/scale)][Math.trunc((sprite.y()+sprite.getHeight())/scale)]<=0 ||
+		dungeon[Math.trunc((sprite.x()+sprite.getWidth())/scale)][Math.trunc((sprite.y()+sprite.getHeight())/scale)]<=0){
+		found = true;
+		sprite.x(sprite.x()-x);
+		sprite.y(sprite.y()-y);
 	}
 }
 
