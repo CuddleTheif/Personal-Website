@@ -15,7 +15,6 @@ var linkColor = "FFE303"
 // Template Properties
 var templatesFolder = "templates"
 var basicTemplateName = "basic"
-var jsFolder = "js"
 var jsonFolder = "json"
 var errorPage = "error"
 
@@ -23,9 +22,9 @@ var errorPage = "error"
 type BasicCss struct{
 	BackgroundColor			string
 	ForegroundColor			string
-	LinkColor				string
+	LinkColor			string
 	SidebarColor			string
-	TitleColor				string
+	TitleColor			string
 	VisitedLinkColor		string
 	HoverLinkColor			string
 	MenuHoverColor			string
@@ -37,7 +36,6 @@ type BasicHtml struct{
 	Author			string
 	OtherAuthors		[]string
 	StyleSheet		template.CSS
-	Javascript		template.JS
 	PageTitle		string
 	Updated			string
 	Message			template.HTML

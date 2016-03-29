@@ -13,7 +13,6 @@ import (
 var htmlTemplate *template.Template
 var pages map[string]BasicHtml
 var styleSheet template.CSS
-var javascript template.JS
 
 func loadFiles() error{
 
@@ -25,13 +24,6 @@ func loadFiles() error{
 	err = cssTemplate.Execute(&cssBuff, cssBasic)
 	if(err!=nil){return errors.New("Error Reading CSS: <br/>"+err.Error())}
 	styleSheet = template.CSS(cssBuff.String())
-
-	jsTemplates, err := loadTemplates(jsFolder)
-	if(err!=nil){return err}
-	var jsBuff bytes.Buffer
-	err = jsTemplates.Execute(&jsBuff, nil)
-	if(err!=nil){return err}
-	javascript = template.JS(jsBuff.String())
 
 	htmlTemplate, err = template.ParseFiles(templatesFolder+"/"+basicTemplateName+".html")
 	if(err!=nil){return err}
@@ -81,7 +73,6 @@ func loadFolder(dir string) (map[string]BasicHtml, error){
 			htmlPage.WebTitle = websiteTitle
 			htmlPage.Author = author
 			htmlPage.StyleSheet = styleSheet
-			htmlPage.Javascript = javascript
 			pages[file.Name()] = htmlPage
 		}
 	}

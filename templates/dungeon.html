@@ -18,109 +18,11 @@
 		</style>
 		<meta charset="utf-8">
 		<script src="https://cdn.rawgit.com/konvajs/konva/0.11.1/konva.min.js"></script>
-		<script type="text/javascript">{{.Javascript}}</script>
+		<script src="static/js/sticky.js"></script>
 		<script type="text/javascript">
-		
-		var dungeonStage, dungeonLayer, characterLayer, player;
-		var dungeon = {{.Dungeon}}, walls = {{.Walls}}, xPos = {{.PlayerX}}, yPos =  {{.PlayerY}}, scale = 16;
-		
-		// Move the player a certain distance with checking for invaild spaces
-		function move(x, y) {
-			xPos += x;
-			yPos += y;
-			found = false;
-			for (i=0;i<walls.length && !found;i++){
-				if(walls[i][0]==xPos && walls[i][1]==yPos){
-					found = true;
-					xPos-=x;
-					yPos-=y;
-				}
-			}
-			if(!found){
-				player.setX(xPos*scale);
-				player.setY(yPos*scale);
-				characterLayer.draw();
-				var viewport = document.getElementById("viewport");
-				viewport.scrollLeft = player.getAbsolutePosition().x-viewport.clientWidth/2;
-				viewport.scrollTop = player.getAbsolutePosition().y-viewport.clientHeight/2;
-			}
-		}
-		
-		// Create the basic grid with the player after the page has loaded
-		document.addEventListener('DOMContentLoaded', function() {
-			dungeonStage = new Konva.Stage({
-			  container: 'grid',
-			  width: dungeon.width*scale,
-			  height: dungeon.height*scale
-			});
-			dungeonLayer = new Konva.Layer();
-			characterLayer = new Konva.Layer();
-			
-			for (var i in dungeon.paths){
-				var points = [];
-				for (var j in dungeon.paths[i].segments){
-					points.push(dungeon.paths[i].segments[j].startX*scale);
-					points.push(dungeon.paths[i].segments[j].startY*scale);
-					if(dungeon.paths[i].segments[j].direction){
-						points.push(dungeon.paths[i].segments[j].startX*scale);
-						points.push((dungeon.paths[i].segments[j].startY+dungeon.paths[i].segments[j].distance)*scale);
-					}
-					else{
-						points.push((dungeon.paths[i].segments[j].startX+dungeon.paths[i].segments[j].distance)*scale);
-						points.push(dungeon.paths[i].segments[j].startY*scale);
-					}
-				}
-				dungeonLayer.add(new Konva.Line({
-				      points: points,
-				      stroke: 'green',
-				      strokeWidth: scale
-				    }));
-			}
-			
-			for (var i in dungeon.rooms)
-				dungeonLayer.add(new Konva.Rect({
-								      x: dungeon.rooms[i].X*scale,
-								      y: dungeon.rooms[i].Y*scale,
-								      width: dungeon.rooms[i].Width*scale,
-								      height: dungeon.rooms[i].Height*scale,
-								      fill: 'red',
-								      stroke: 'red',
-								      strokeWidth: scale
-								    }));
-								    
-			player = new Konva.Circle({
-					      x: xPos*scale,
-					      y: yPos*scale,
-					      radius: scale/4,
-					      fill: 'yellow',
-					      strokeWidth: 0
-					    });
-			characterLayer.add(player);
-			
-			dungeonStage.add(dungeonLayer, characterLayer);
-			
-			var viewport = document.getElementById("viewport");
-			viewport.scrollLeft = player.getAbsolutePosition().x-viewport.clientWidth/2;
-			viewport.scrollTop = player.getAbsolutePosition().y-viewport.clientHeight/2;
-		}, false);
-		
-		// Add Key input
-		document.addEventListener('keydown', function(event) {
-		    if(event.keyCode == 38 || event.keyCode == 87) {
-		        move(0, -1);
-		    }
-		    else if(event.keyCode == 40 || event.keyCode == 83) {
-		        move(0, 1);
-		    }
-		    else if(event.keyCode == 37 || event.keyCode == 65) {
-		        move(-1, 0);
-		    }
-		    else if(event.keyCode == 39 || event.keyCode == 68) {
-		        move(1, 0);
-		    }
-		});
-		
+		var scale = 32, dungeon = {{.Dungeon}}, xPos = {{.PlayerX}}*scale, yPos =  {{.PlayerY}}*scale;
 		</script>
+		<script src="static/js/dungeon.js"></script>
 	</head>
 	<body>
 		<div id="body">

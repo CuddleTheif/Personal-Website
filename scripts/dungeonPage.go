@@ -12,11 +12,9 @@ var gridTemplate *template.Template
 
 type GridTemplate struct {
 	Dungeon    		template.JS
-	Walls    		template.JS
 	PlayerX			template.JS
 	PlayerY			template.JS
 	StyleSheet		template.CSS
-	Javascript		template.JS
 }
 
 func init() {
@@ -38,20 +36,16 @@ func dungeon(w http.ResponseWriter, r *http.Request) {
 		dungeon.generate(rooms, 20)
 
 	// Add the grid add buttons to the actual page (and draw the player in the grid)
-		gridValues := GridTemplate{template.JS(dungeonToJavascript(dungeon)), template.JS(arrayToJavascript(dungeon.getWalls())), template.JS(strconv.Itoa(dungeon.startX)), template.JS(strconv.Itoa(dungeon.startY)), styleSheet, javascript}
+		gridValues := GridTemplate{template.JS(dungeonToJavascript(dungeon)), template.JS(strconv.Itoa(dungeon.startX)), template.JS(strconv.Itoa(dungeon.startY)), styleSheet}
 		err := gridTemplate.Execute(w, gridValues)
 		fmt.Fprint(w, err)
 }
 
 // Converts a 2D array to a javascript 2D array as a string
 func dungeonToJavascript(dungeon Dungeon) string{
-	javascript := "{width:"+strconv.Itoa(dungeon.width)+", height:"+strconv.Itoa(dungeon.height)+", rooms:["
+	javascript := "{width:"+strconv.Itoa(dungeon.width)+", height:"+strconv.Itoa(dungeon.height)+", walls:"+arrayToJavascript(dungeon.getWalls())+",paths:"+arrayToJavascript(dungeon.getPaths())+",rooms:["
 	for _, room := range dungeon.rooms {
 		javascript += roomToJavascript(room)+","
-	}
-	javascript = javascript[:len(javascript)-1]+"], paths:["
-	for _, path := range dungeon.paths {
-		javascript += pathToJavascript(path)+","
 	}
 	return javascript[:len(javascript)-1]+"]}"
 }
@@ -72,10 +66,10 @@ func segmentToJavascript(segment Segment) string{
 	return "{startX:"+strconv.Itoa(segment.startX)+", startY:"+strconv.Itoa(segment.startY)+", distance:"+strconv.Itoa(segment.distance)+", direction:"+strconv.FormatBool(segment.direction)+"}"
 }
 
-func arrayToJavascript(array [][]int) string{
+func arrayToJavascript(array []Point) string{
 	javascript := "["
 	for _, element := range array {
-		javascript += "["+strconv.Itoa(element[0])+","+strconv.Itoa(element[1])+"],"
+		javascript += "{x:"+strconv.Itoa(element.x)+",y:"+strconv.Itoa(element.y)+"},"
 	}
 	return javascript[:len(javascript)-1]+"]"
 }

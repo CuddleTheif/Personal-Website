@@ -65,8 +65,13 @@ func (dungeon *Dungeon) generate(possibleRooms []Room, numRooms int){
 		}
 }
 
+type Point struct {
+	x	int
+	y	int
+}
+
 // Generates and returns the 2D char array representing the dungeon (X = room, # = hallway)
-func (dungeon *Dungeon) getWalls() [][]int {
+func (dungeon *Dungeon) getWalls() []Point {
 
 	// Create empty grid
 	grid := make([][]bool, dungeon.height)
@@ -96,22 +101,46 @@ func (dungeon *Dungeon) getWalls() [][]int {
 
 	// Add rooms to grid
 	for _, room := range dungeon.rooms {
-		for x := room.X; x <= room.Width + room.X; x++ {
-			for y := room.Y; y <= room.Height+room.Y; y++ {
+		for x := room.X; x < room.Width + room.X; x++ {
+			for y := room.Y; y < room.Height+room.Y; y++ {
 				grid[y][x] = true
 			}
 		}
 	}
 
 	// Build walls
-	walls := make([][]int, 0)
+	walls := make([]Point, 0)
 	for y := range grid {
 		for x := range grid[y] {
 			if !grid[y][x] && ((x+1<dungeon.width && grid[y][x+1]) || (x-1>=0 && grid[y][x-1]) || (y+1<dungeon.height && grid[y+1][x]) || (y-1>=0 && grid[y-1][x])) {
-				walls = append(walls, []int{x, y});
+				walls = append(walls, Point{x,y})
 			}
 		}
 	}
 
 	return walls
 }
+
+// Generates and returns the 2D char array representing the dungeon (X = room, # = hallway)
+func (dungeon *Dungeon) getPaths() []Point {
+
+	// Add paths to array and return
+	paths := make([]Point, 0)
+	for _, path := range dungeon.paths {
+		for _, segment := range path.segments {
+			for j := 0; abs(j) < abs(segment.distance); j+=segment.distance/abs(segment.distance) {
+				var x, y int
+				if segment.direction {
+					x = segment.startX
+					y = segment.startY + j
+				} else {
+					x = segment.startX + j
+					y = segment.startY
+				}
+				paths = append(paths, Point{x,y})
+			}
+		}
+	}
+	return paths
+}
+
