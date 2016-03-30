@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"strconv"
 	"html/template"
-"fmt"
+	"fmt"
 )
 
 var gridTemplate *template.Template

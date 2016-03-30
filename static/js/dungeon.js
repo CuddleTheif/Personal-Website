@@ -1,5 +1,4 @@
-var dungeonStage, dungeonLayer, characterLayer, parallaxLayer, player, playerMovements = [], curMovement, dirKeyStack = [], gameLoaded = false;
-const DIRECTIONS = ['Down', 'Left', 'Right', 'Up'], CONTROLS = {'38': 3, '87': 3, '40': 0, '83': 0, '37': 1, '65': 1, '39': 2, '68': 2};
+var dungeonStage, dungeonLayer, characterLayer, parallaxLayer, player, gameLoaded = false;
 
 // Gets a sprite's current width
 Konva.Sprite.prototype.getWidth = function(){
@@ -40,24 +39,17 @@ document.addEventListener('DOMContentLoaded', function() {
     			for(var y=0;y<dungeon[x].length;y++){
     				switch(dungeon[x][y]){
     					case -1: // nothing = roof tile
-    						addTile(parallaxLayer, {x:x,y:y}, {x:wallTile.x*64, y:wallTile.y*160}, wallTileSheet, function(x, y){return dungeon[x][y]==-1 || (y>0 && dungeon[x][y+1]<=0);}, true);
+    						addTile(parallaxLayer, {x:x,y:y}, {x:wallTile.x*64, y:wallTile.y*160}, wallTileSheet, function(x, y){return x<0 || y<0 || x>=dungeon.length || y>=dungeon[x].length || dungeon[x][y]==-1 || dungeon[x][y+1]<=0;}, true);
     						if(dungeon[x][y-1]!=-1)
-    							addTile(parallaxLayer, {x:x,y:y-1}, {x:wallTile.x*64, y:wallTile.y*160}, wallTileSheet, function(x, y){return dungeon[x][y]==-1 || (y>0 && dungeon[x][y+1]<=0);}, true);
+    							addTile(parallaxLayer, {x:x,y:y-1}, {x:wallTile.x*64, y:wallTile.y*160}, wallTileSheet, function(x, y){return x<0 || y<0 || x>=dungeon.length || y>=dungeon[x].length || dungeon[x][y]==-1 || dungeon[x][y+1]<=0;}, true);
     						break;
     					case 0: // wall tile
-    						addTile(dungeonLayer, {x:x,y:y}, {x:wallTile.x*64, y:wallTile.y*160+64}, wallTileSheet, function(x, y){return dungeon[x][y]==0;}, false);
+    						addTile(dungeonLayer, {x:x,y:y}, {x:wallTile.x*64, y:wallTile.y*160+64}, wallTileSheet, function(x, y){return x>=0 && y>=0 && x<dungeon.length && y<dungeon[x].length && dungeon[x][y]==0;}, false);
     						if(dungeon[x][y-1]!=-1)
-    							addTile(parallaxLayer, {x:x,y:y-1}, {x:wallTile.x*64, y:wallTile.y*160}, wallTileSheet, function(x, y){return dungeon[x][y]==-1 || (y>0 && dungeon[x][y+1]<=0);}, true);
+    							addTile(parallaxLayer, {x:x,y:y-1}, {x:wallTile.x*64, y:wallTile.y*160}, wallTileSheet, function(x, y){return x<0 || y<0 || x>=dungeon.length || y>=dungeon[x].length || dungeon[x][y]==-1 || dungeon[x][y+1]<=0;}, true);
     						break;
     					case 1: // room tile
-    						dungeonLayer.add(new Konva.Rect({
-							      x: x*scale,
-							      y: y*scale,
-							      width: scale,
-							      height: scale,
-							      fill: 'red',
-							      strokeWidth: 0
-							    }));
+    						addTile(dungeonLayer, {x:x,y:y}, {x:roomTile.x*64, y:roomTile.y*96}, floorTileSheet, function(x, y){return dungeon[x][y]==1;}, true);
     						break;
     					case 2: // path tile
     						addTile(dungeonLayer, {x:x,y:y}, {x:pathTile.x*64, y:pathTile.y*96}, floorTileSheet, function(x, y){return dungeon[x][y]==2;}, true);
@@ -137,24 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	  updateViewport();
     };
     playerImg.src = 'static/images/placeholder_player.png';
-    
-    // Create the player movement animations
-    playerMovements.push(new Konva.Animation(function(frame) {
-	        move(player, 0, frame.timeDiff*playerSpeed);
-	        updateViewport();
-	    }, characterLayer));
-	playerMovements.push(new Konva.Animation(function(frame) {
-	        move(player, 1, frame.timeDiff*playerSpeed);
-	        updateViewport();
-	    }, characterLayer));
-	playerMovements.push(new Konva.Animation(function(frame) {
-	        move(player, 2, frame.timeDiff*playerSpeed);
-	        updateViewport();
-	    }, characterLayer));
-	playerMovements.push(new Konva.Animation(function(frame) {
-	        move(player, 3, frame.timeDiff*playerSpeed);
-	        updateViewport();
-	    }, characterLayer));
 	
 }, false);
 
@@ -199,7 +173,7 @@ function addTile(layer, position, tilePosition, tileSheet, tester, corners){
 function getSubTiles(pos, tilePos, tester, corners){
 	var subTiles = {topLeft: {x:tilePos.x, y:tilePos.y}, topRight: {x:tilePos.x, y:tilePos.y}, bottomLeft: {x:tilePos.x, y:tilePos.y}, bottomRight: {x:tilePos.x, y:tilePos.y}};
 	// Check for similar tile to left
-	if(pos.x>0 && tester(pos.x-1,pos.y)){
+	if(tester(pos.x-1,pos.y)){
 	  subTiles.topLeft.x += 32;
 	  subTiles.bottomLeft.x += 32;
 	}
@@ -209,7 +183,7 @@ function getSubTiles(pos, tilePos, tester, corners){
 	}
 	
 	// Check for similar tile above
-	if(pos.y > 0 && tester(pos.x,pos.y-1)){
+	if(tester(pos.x,pos.y-1)){
 	  subTiles.topLeft.y += 64;
 	  subTiles.topRight.y += 64;
 	}
@@ -219,7 +193,7 @@ function getSubTiles(pos, tilePos, tester, corners){
 	}
 	
 	// Check for similar tile to the right
-	if(pos.x<dungeon.length-1 && tester(pos.x+1,pos.y)){
+	if(tester(pos.x+1,pos.y)){
 	  subTiles.bottomRight.x += 16;
 	  subTiles.topRight.x += 16;
 	}
@@ -229,7 +203,7 @@ function getSubTiles(pos, tilePos, tester, corners){
 	}
 	
 	// Check for similar tile below
-	if(pos.y<dungeon[0].length-1 && tester(pos.x,pos.y+1)){
+	if(tester(pos.x,pos.y+1)){
 	  subTiles.bottomRight.y += 48;
 	  subTiles.bottomLeft.y += 48;
 	}
@@ -242,19 +216,19 @@ function getSubTiles(pos, tilePos, tester, corners){
 	if(corners){
 	
 		// Check for top left corner
-		if(subTiles.topLeft.x==tilePos.x+32 && subTiles.topLeft.y==tilePos.y+64 && (pos.x<0 || pos.y<0 || !tester(pos.x-1,pos.y-1)))
+		if(subTiles.topLeft.x==tilePos.x+32 && subTiles.topLeft.y==tilePos.y+64 && !tester(pos.x-1,pos.y-1))
 			subTiles.topLeft = {x:tilePos.x+32, y:tilePos.y};
 		
 		// Check for top right corner
-		if(subTiles.topRight.x==tilePos.x+16 && subTiles.topRight.y==tilePos.y+64 && (pos.x>dungeon.length-1 || pos.y<0 || !tester(pos.x+1,pos.y-1)))
+		if(subTiles.topRight.x==tilePos.x+16 && subTiles.topRight.y==tilePos.y+64 && !tester(pos.x+1,pos.y-1))
 			subTiles.topRight = {x:tilePos.x+48, y:tilePos.y};
 		
 		// Check for bottom left corner
-		if(subTiles.bottomLeft.x==tilePos.x+32 && subTiles.bottomLeft.y==tilePos.y+48 && (pos.x<0 || pos.y>dungeon[0].length-1 || !tester(pos.x-1,pos.y+1)))
+		if(subTiles.bottomLeft.x==tilePos.x+32 && subTiles.bottomLeft.y==tilePos.y+48 && !tester(pos.x-1,pos.y+1))
 			subTiles.bottomLeft = {x:tilePos.x+32, y:tilePos.y+16};
 		
 		// Check for bottom right corner
-		if(subTiles.bottomRight.x==tilePos.x+16 && subTiles.bottomRight.y==tilePos.y+48 && (pos.x>dungeon.length-1 || pos.y>dungeon[0].length-1 || !tester(pos.x+1,pos.y+1)))
+		if(subTiles.bottomRight.x==tilePos.x+16 && subTiles.bottomRight.y==tilePos.y+48 && !tester(pos.x+1,pos.y+1))
 			subTiles.bottomRight = {x:tilePos.x+48, y:tilePos.y+16};
 	}
 	
@@ -292,59 +266,4 @@ function updateViewport(){
 	var viewport = document.getElementById("viewport");
 	viewport.scrollLeft = player.getAbsolutePosition().x-viewport.clientWidth/2;
 	viewport.scrollTop = player.getAbsolutePosition().y-viewport.clientHeight/2;
-}
-
-// Move the player a certain direction with checking for invaild spaces and playing an animation (0 - down, 1 - left, 2 - right, 3 - down)
-function movePlayer(dir){
-	
-	// if not animation set to moving direction set it and start the animation
-	if(player.animation()!='move'+DIRECTIONS[dir]){
-		var start = player.animation().startsWith('idle');
-		player.setAnimation('move'+DIRECTIONS[dir]);
-		if(start)
-			player.start();
-		if(curMovement)
-			curMovement.stop();
-		curMovement = playerMovements[dir];
-		playerMovements[dir].start();
-	}
-}
-
-// Stop the player moving in the given direction
-function stopPlayer(){
-	if(curMovement)
-		curMovement.stop();
-	player.setAnimation('idle'+player.animation().substring('move'.length, player.animation().length-1));
-	player.stop();
-}
-
-// Add Key input
-document.addEventListener('keydown', function(event) {
-	if(CONTROLS[event.keyCode.toString()]!=null){
-    	event.preventDefault();
-		addKeyToStack(event.keyCode);
-	}
-});
-document.addEventListener('keyup', function(event) {
-	if(CONTROLS[event.keyCode.toString()]!=null){
-    	event.preventDefault();
-		removeKeyFromStack(event.keyCode);
-	}
-});
-
-function addKeyToStack(key){
-	if(dirKeyStack.indexOf(key)==-1)
-		dirKeyStack.push(key);
-	if(CONTROLS[key.toString()]!=CONTROLS[dirKeyStack[dirKeyStack.length-2]])
-		movePlayer(CONTROLS[key.toString()]);
-}
-
-function removeKeyFromStack(key){
-	if(dirKeyStack.indexOf(key)==-1)
-		return;
-	if(dirKeyStack.indexOf(key)==dirKeyStack.length-1 && dirKeyStack.length>1)
-		movePlayer(CONTROLS[dirKeyStack[dirKeyStack.length-2]]);
-	dirKeyStack.splice(dirKeyStack.indexOf(key), 1);
-	if(dirKeyStack.length==0)
-		stopPlayer();
 }

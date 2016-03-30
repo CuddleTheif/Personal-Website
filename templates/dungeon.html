@@ -20,9 +20,11 @@
 		<script src="https://cdn.rawgit.com/konvajs/konva/0.11.1/konva.min.js"></script>
 		<script src="static/js/sticky.js"></script>
 		<script type="text/javascript">
-		var scale = 32, playerSpeed=0.1, pathTile = {x:3, y:2}, wallTile = {x:7, y:1}, dungeon = {{.Dungeon}}, xPos = {{.PlayerX}}*scale, yPos =  {{.PlayerY}}*scale;
+		var scale = 32, playerSpeed=0.1, roomTile = {x:3, y:3}, pathTile = {x:3, y:2}, wallTile = {x:0, y:2}, dungeon = {{.Dungeon}}, xPos = {{.PlayerX}}*scale, yPos =  {{.PlayerY}}*scale;
 		</script>
 		<script src="static/js/dungeon.js"></script>
+		<script src="static/js/controls.js"></script>
+		<script src="static/js/multiplayer.js"></script>
 	</head>
 	<body>
 		<div id="body">
